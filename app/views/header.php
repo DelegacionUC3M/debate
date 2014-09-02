@@ -8,10 +8,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="/pisado/assets/css/normalize.min.css">
-        <link rel="stylesheet" href="/pisado/assets/css/main.css">
+        <link rel="stylesheet" href="/debate/assets/css/normalize.min.css">
+        <link rel="stylesheet" href="/debate/assets/css/main.css">
 
-        <script src="/pisado/assets/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="/debate/assets/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -24,14 +24,14 @@
                 <div id="user">
                     <?php if ($user) { ?>
                         <span>Hola, <?= $user->name; ?> </span>
-                        <a href="/pisado/inicio/logout">Salir</a>
+                        <a href="/debate/inicio/logout">Salir</a>
                     <?php } else { ?>
-                        <a href="/pisado/inicio/login">Entrar</a>
+                        <a href="/debate/inicio/login">Entrar</a>
                     <?php } ?>
                 </div>
 
-                <a href="/pisado/inicio"> <h1>PISADO</h1> </a>
-                <a href="http://delegacion.uc3m.es" target="_blank"> <img src="/pisado/assets/img/delegacion.png" /> </a>
+                <a href="/debate/inicio"> <h1>Preguntas para el debate</h1> </a>
+                <a href="http://delegacion.uc3m.es" target="_blank"> <img src="/debate/assets/img/delegacion.png" /> </a>
 
             </div>
         </header>

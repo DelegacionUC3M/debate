@@ -190,6 +190,7 @@ header #user a {
 .main #login form {
   margin: 20px 0;
 }
+.main #login input[type="submit"],
 .main #login input[type="text"],
 .main #login input[type="password"] {
   display: block;
@@ -199,6 +200,7 @@ header #user a {
   background: #cddde5;
   border-color: #145573;
 }
+.main #login input[type="submit"]:hover,
 .main #login input[type="text"]:hover,
 .main #login input[type="password"]:hover {
   border-color: #145573;

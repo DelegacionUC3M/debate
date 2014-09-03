@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
 @font-face {
   font-family: 'icomoon';
-  src: url('fonts/pisado.eot?-xuph9k');
-  src: url('fonts/pisado.eot?#iefix-xuph9k') format('embedded-opentype'), url('fonts/pisado.woff?-xuph9k') format('woff'), url('fonts/pisado.ttf?-xuph9k') format('truetype'), url('fonts/pisado.svg?-xuph9k#icomoon') format('svg');
+  src: url('fonts/debate.eot?-xuph9k');
+  src: url('fonts/debate.eot?#iefix-xuph9k') format('embedded-opentype'), url('fonts/debate.woff?-xuph9k') format('woff'), url('fonts/debate.ttf?-xuph9k') format('truetype'), url('fonts/debate.svg?-xuph9k#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,7 +23,7 @@
 .icon-print:before {
   content: "\31";
 }
-.icon-pisado:before {
+.icon-debate:before {
   content: "\64";
 }
 .icon-fill:before {
@@ -77,6 +77,7 @@ a {
 }
 input[type="text"],
 input[type="password"],
+input[type="submit"],
 textarea,
 select {
   border: 1px solid #e3e3e3;
@@ -127,9 +128,97 @@ header #user a {
   border: 1px solid #bad4e2;
   color: #006191;
 }
-
-
-
+.main #inicio,
+.main #login {
+  background: linear-gradient(rgba(0, 97, 145, 0.65), rgba(0, 97, 145, 0.65)), url('/debate/assets/img/Geta.jpg') center;
+  box-shadow: 0 0 4px 0 #2b2b2b;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+.main #inicioPregunta {
+  color: #585858;
+  text-align: center;
+}
+.main #inicioPregunta h2,
+.main #inicio h2,
+.main #login h2,
+.main #inicioPregunta h3,
+.main #inicio h3,
+.main #login h3 {
+  border-bottom: none;
+  color: #fff;
+}
+.main #inicioPregunta h2,
+.main #inicio h2,
+.main #login h2 {
+  font-size: 2em;
+  margin: 30px 0;
+}
+.main #inicioPregunta p,
+.main #inicio p,
+.main #login p,
+.main #inicioPregunta ul,
+.main #inicio ul,
+.main #login ul {
+  margin: 0;
+  padding: 0;
+}
+.main #inicioPregunta,
+.main #inicio {
+  padding: 50px 0 70px;
+}
+.main #inicioPregunta li,
+.main #inicio li {
+  list-style: none;
+  display: inline-block;
+  width: 50%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+.main #inicioPregunta li p,
+.main #inicio li p {
+  text-align: justify;
+}
+.main #login {
+  padding: 50px 0;
+}
+.main #login p.error {
+  color: red;
+  font-weight: bold;
+}
+.main #login form {
+  margin: 20px 0;
+}
+.main #login input[type="text"],
+.main #login input[type="password"] {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  padding: 10px 15px;
+  background: #cddde5;
+  border-color: #145573;
+}
+.main #login input[type="text"]:hover,
+.main #login input[type="password"]:hover {
+  border-color: #145573;
+}
+.main #login input[type="text"] {
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+}
+.main #login input[type="password"] {
+  border-top: 1px solid  #9fadb1;
+  border-radius: 0 0 5px 5px;
+}
+.main #login input[type="password"]:hover {
+  border-top: 1px solid  #9fadb1;
+}
+.main #login input[type="submit"] {
+  margin-top: 30px;
+  background: #006191;
+  color: #fff;
+}
 footer {
   font-size: 0.9em;
   background: #fff;

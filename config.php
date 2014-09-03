@@ -9,7 +9,7 @@ define('ROL_ADMIN', 100);
 
 // LDAP Parameters
 define('LDAP_HOST', 'ldaps://ldap.uc3m.es');
-define('LDAP_BASEDN', 'ou=Alumnos,ou=Gente,o=Universidad Carlos III,c=es');
+define('LDAP_BASEDN', 'ou=Gente,o=Universidad Carlos III,c=es');
 define('LDAP_IDFIELD', 'uid');
 define('LDAP_NAMEFIELD', 'cn');
 define('LDAP_MAILFIELD', 'mail');

@@ -6,8 +6,8 @@
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -16,7 +16,6 @@
   text-transform: none;
   line-height: 1;
   /* Better Font Rendering =========== */
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -61,12 +60,17 @@
 }
 html {
   font-family: 'Roboto', sans-serif;
-  background: #EDEFF2;
+  background: #e1e1e1;
   color: #2b2b2b;
 }
 a {
   outline: none;
   text-decoration: none;
+  color: #066394;
+}
+a:active,
+a:visited {
+  color: #066394;
 }
 .wrapper {
   max-width: 960px;
@@ -77,14 +81,15 @@ a {
 }
 input[type="text"],
 input[type="password"],
-input[type="submit"],
 textarea,
 select {
-  border: 1px solid #e3e3e3;
-  padding: 4px 6px;
-  border-radius: 4px;
-  outline: 0;
-  color: #747373;
+  padding: 6px 8px;
+  border-radius: 5px;
+  background: #f6f6f6;
+  border: 1px solid #c4c4c4;
+  color: #555454;
+  transition: all 0.4s;
+  font-weight: 300;
 }
 input[type="text"]:hover,
 input[type="password"]:hover,
@@ -94,7 +99,39 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #747373;
+  border: 1px solid #555454;
+}
+input,
+button,
+select,
+textarea {
+  outline: 0;
+  font-family: 'Roboto', sans-serif;
+}
+button,
+a.button {
+  display: block;
+  background: #066394;
+  color: #fff;
+  position: relative;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+  border: none;
+  border-bottom: 2px solid #004a6f;
+  transition: all 0.4s;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+button:active,
+a.button:active {
+  margin-top: 2px;
+  border-bottom: 0px;
+}
+button:before,
+a.button:before {
+  margin-right: 10px;
 }
 h1,
 h2,
@@ -103,11 +140,12 @@ h3 {
 }
 header {
   background: #fff;
+  border-bottom: 1px solid #ccc;
   padding: 19px 0;
 }
 header h1 {
   font-size: 2.7em;
-  color: #006394;
+  color: #066394;
   margin: 0;
   display: inline-block;
   vertical-align: middle;
@@ -125,101 +163,279 @@ header #user {
 header #user a {
   padding: 8px 23px;
   border-radius: 5px;
-  border: 1px solid #bad4e2;
+  border: 1px solid #bad5e2;
   color: #006191;
 }
-.main #inicio,
-.main #login {
+header #user a.logout {
+  border: none;
+}
+html,
+body {
+  height: 100%;
+}
+.main {
+  min-height: 500px;
+  min-height: 60vh;
+  min-height: calc(100% - 93px - 194px);
+}
+.main h2 {
+  font-size: 1.7em;
+  max-height: 38px;
+}
+.main h2 a {
+  float: right;
+  font-size: 0.55em;
+  margin-left: 10px;
+}
+.main h3 {
+  text-align: center;
+  font-size: 1.6em;
+}
+.main p.info {
+  background: #fedeb2;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  font-size: 0.8em;
+  padding: 10px 15px;
+}
+.main p.info.error {
+  background: #FEB2B2;
+  width: 90%;
+  margin: 10px auto;
+  font-weight: bold;
+}
+.main p.info.hide {
+  display: none;
+}
+.main.inicio,
+.main.login {
   background: linear-gradient(rgba(0, 97, 145, 0.65), rgba(0, 97, 145, 0.65)), url('/debate/assets/img/Geta.jpg') center;
-  box-shadow: 0 0 4px 0 #2b2b2b;
   background-size: cover;
   color: #fff;
   text-align: center;
+  box-sizing: border-box;
+  display: table;
+  width: 100%;
+  border-collapse: separate;
 }
-.main #inicioPregunta {
-  color: #585858;
-  text-align: center;
+.main.inicio > div,
+.main.login > div {
+  display: table-cell;
+  vertical-align: middle;
 }
-.main #inicioPregunta h2,
-.main #inicio h2,
-.main #login h2,
-.main #inicioPregunta h3,
-.main #inicio h3,
-.main #login h3 {
+.main.inicio h2,
+.main.login h2,
+.main.inicio h3,
+.main.login h3 {
   border-bottom: none;
   color: #fff;
 }
-.main #inicioPregunta h2,
-.main #inicio h2,
-.main #login h2 {
+.main.inicio h2,
+.main.login h2 {
   font-size: 2em;
-  margin: 30px 0;
+  margin: 0 0 30px;
 }
-.main #inicioPregunta p,
-.main #inicio p,
-.main #login p,
-.main #inicioPregunta ul,
-.main #inicio ul,
-.main #login ul {
+.main.inicio p,
+.main.login p {
+  margin: 15px 0;
+}
+.main.inicio ul,
+.main.login ul {
   margin: 0;
   padding: 0;
 }
-.main #inicioPregunta,
-.main #inicio {
-  padding: 50px 0 70px;
+.main.inicio {
+  border-spacing: 0 65px;
 }
-.main #inicioPregunta li,
-.main #inicio li {
+.main.inicio li {
   list-style: none;
   display: inline-block;
   width: 50%;
   padding: 0 30px;
   box-sizing: border-box;
 }
-.main #inicioPregunta li p,
-.main #inicio li p {
+.main.inicio li p {
   text-align: justify;
 }
-.main #login {
-  padding: 50px 0;
+.main.login {
+  border-spacing: 0 80px;
 }
-.main #login p.error {
-  color: red;
+.main.login p.error {
+  color: #FF2F2F;
   font-weight: bold;
 }
-.main #login form {
+.main.login form {
   margin: 20px 0;
 }
-.main #login input[type="submit"],
-.main #login input[type="text"],
-.main #login input[type="password"] {
+.main.login form.error input[type="text"],
+.main.login form.error input[type="password"] {
+  border-color: rgba(128, 0, 0, 0.75) !important;
+}
+.main.login input[type="text"],
+.main.login input[type="password"] {
   display: block;
   margin: 0 auto;
-  width: 250px;
-  padding: 10px 15px;
-  background: #cddde5;
-  border-color: #145573;
+  width: 300px;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
 }
-.main #login input[type="submit"]:hover,
-.main #login input[type="text"]:hover,
-.main #login input[type="password"]:hover {
-  border-color: #145573;
-}
-.main #login input[type="text"] {
+.main.login input[type="text"] {
   border-radius: 5px 5px 0 0;
-  border-bottom: none;
 }
-.main #login input[type="password"] {
-  border-top: 1px solid  #9fadb1;
+.main.login input[type="password"] {
   border-radius: 0 0 5px 5px;
+  border-top: none;
 }
-.main #login input[type="password"]:hover {
-  border-top: 1px solid  #9fadb1;
+.main.login button {
+  width: 300px;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  text-shadow: -1px 0 4px rgba(0, 0, 0, 0.55);
+  margin: 30px auto 0;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.45);
+  border-width: 3px;
 }
-.main #login input[type="submit"] {
-  margin-top: 30px;
-  background: #006191;
+.main.login button:active {
+  margin-top: 33px;
+}
+.main #panel {
+  padding: 30px 0;
+  border-spacing: 0 80px;
+}
+.main #panel p.error {
+  color: #FF2F2F;
+  font-weight: bold;
+}
+.main #panel form.error input[type="text"] {
+  border-color: rgba(128, 0, 0, 0.75) !important;
+}
+.main #panel input[type="text"] {
+  display: inline-block;
+  margin: 0 0 0 20%;
+  width: 300px;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
+}
+.main #panel input[type="text"] {
+  border-radius: 5px 5px 5px 5px;
+}
+.main #panel ul#preguntas {
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  margin-top: 5%;
+}
+.main #panel ul#preguntas li {
+  width: 100%;
+  height: 45px;
+  margin: 2% 0;
+  display: flex;
+  flex-wrap: no-wrap;
+}
+.main #panel ul#preguntas li form {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.main #panel ul#preguntas li form div {
+  display: inline-block;
+  width: calc(100% - 200px);
+  height: 100%;
+  text-align: left;
+  position: relative;
+  margin: 0;
+}
+.main #panel ul#preguntas li form div p {
+  position: absolute;
+  display: inline-block;
+  text-align: right;
+  right: 2%;
+  height: 100%;
+  top: 0;
+  margin: 0 0;
+}
+.main #panel ul#preguntas li form button {
+  display: inline;
+  width: 100px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  margin: 0 0;
+  padding: 0 0;
+}
+.main #panel li {
+  display: inline-block;
+  margin: auto 5%;
+}
+.main #panel button {
+  display: inline-block;
+  width: 300px;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  text-shadow: -1px 0 4px rgba(0, 0, 0, 0.55);
+  margin: 2% auto 0;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.45);
+  border-width: 3px;
+}
+.main #panel button:active {
+  margin-top: 33px;
+}
+#pregunta {
+  color: #585858;
+  text-align: center;
+  padding: 50px 0 70px;
+  box-shadow: 0 0 6px 1px #2b2b2b;
+}
+#pregunta a {
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+#pregunta a.tab {
+  display: inline-block;
+  padding: 8px 23px;
+  border-radius: 5px;
+  border: 1px solid #bad5e2;
+  color: #006191;
+}
+#pregunta a.tab:hover {
+  background: #066394;
   color: #fff;
+}
+#pregunta ul {
+  padding: 0 0;
+  display: inline-block;
+  width: 100%;
+}
+#pregunta ul li {
+  list-style: none;
+  display: inline-block;
+  line-height: 100%;
+  width: 50%;
+  padding: 0 1%;
+}
+#pregunta ul li.error {
+  background: #FEB2B2;
+  width: 90%;
+  margin: 10px auto;
+  font-weight: bold;
+}
+#pregunta ul li p {
+  display: inline-block;
+  text-align: left;
+  line-height: 100%;
+  width: 80%;
+  vertical-align: middle;
+}
+#pregunta ul li span {
+  display: inline-block;
+  text-align: right;
+  font-weight: bold;
+  width: 20%;
+  vertical-align: middle;
 }
 footer {
   font-size: 0.9em;
@@ -231,6 +447,9 @@ footer #rsociales {
   margin: 20px 0;
   text-align: center;
 }
+footer #rsociales a {
+  border-bottom: solid 1px #bad5e2;
+}
 footer #copy {
   border-top: 1px solid #e3e3e3;
   text-align: center;
@@ -238,7 +457,7 @@ footer #copy {
 }
 footer h2 {
   margin: 0;
-  color: #006394;
+  color: #066394;
 }
 footer i {
   margin: 0 5px 0 15px;
@@ -251,35 +470,40 @@ footer span {
 }
 footer span {
   max-width: 500px;
+  text-align: left;
 }
 @media print {
   body {
     font-size: 12px;
+    background: #fff;
+    color: #000;
   }
-  .print {
-    display: inline-block;
+  header {
+    border-bottom: 1px #066394 solid;
+  }
+  header img {
+    float: right;
   }
   .no-print {
     display: none;
   }
   header #user,
-  h2,
+  h2 a,
   footer {
-    display: none;
+    display: none !important;
   }
-  ul#comentarios li {
-    margin: 4px auto !important;
-    width: 100%;
-    border-top: 1px solid #a6b0be !important;
-    border-left: none !important;
-    border-right: none !important;
-    border-bottom: none !important;
-    border-radius: 0 !important;
+}
+@keyframes vibrate {
+  0% {
+    transform: rotate(0);
   }
-  ul#comentarios li div {
-    border-bottom: 1px dashed #a6b0be !important;
+  25% {
+    transform: rotate(-1.5deg);
   }
-  ul#comentarios li.compose {
-    display: none;
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(1.5deg);
   }
 }

@@ -1,10 +1,10 @@
 <?php
 
 class Controller {
-	
+
 	protected function security($redirect = true) {
 
-		if (isset($_SESSION['user']) && isset($_SESSION['user']->nia) && !empty($_SESSION['user']->nia)) {
+		if (isset($_SESSION['user']) && isset($_SESSION['user']->uid) && !empty($_SESSION['user']->uid)) {
 			return true;
 		}
 
@@ -23,6 +23,10 @@ class Controller {
 
 		$title = isset($title) ? $title : 'DEBATE - Delegación UC3M';
 		$user = isset($_SESSION['user']) ? $_SESSION['user'] : NULL;
+
+		if ($view == 'inicio' || $view == 'login') {
+			$section = $view;
+		}
 
 		include ABSPATH . 'app/views/header.php';
 		include ABSPATH . 'app/views/' . $view . '.php';
@@ -49,5 +53,4 @@ class Controller {
 		include ABSPATH . 'app/views/error.php';
 		include ABSPATH . 'app/views/footer.php';
 	}
-
 }

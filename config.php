@@ -19,6 +19,8 @@ date_default_timezone_set('Europe/Madrid');
 /* SQL Parameters */
 define('SQL_HOST', 'localhost');
 define('SQL_DB', 'debate');
-define('SQL_PASSWD', 'debate');
-define('SQL_USER', 'debate');
+define('SQL_PASSWD', 'jugar');
+define('SQL_USER', 'root');
+// define('SQL_PASSWD', '287985cc819fadb6dba56c24938c971e');
+// define('SQL_USER', 'debate');
 define('SQL_PORT', 3306);

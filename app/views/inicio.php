@@ -1,7 +1,6 @@
-<section id="inicio">
-
+<div>
 	<div class="wrapper">
-		<h2>Preguntas para el debate</h2>
+		<h2>Preguntas para el debate a Rector</h2>
 		<p>Mediante esta aplicacion profesores, alumnos y personal administrativo pueden enviar las preguntas que deseean que se haga en el debate a la delegacion.</p>
 		<ul>
 			<li>
@@ -13,10 +12,15 @@
 			</li>
 		</ul>
 	</div>
-</section>
-<section id="inicioPregunta">
-	<div class="wrapper">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut massa non enim pharetra lacinia eu ac neque. Curabitur sollicitudin tincidunt magna non euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam tincidunt orci sed diam auctor mollis. Morbi quis bibendum risus, laoreet convallis nisl.</p>
-	</div>
+</div>
 
-</section>
+</div>
+
+<div id="pregunta">
+	<div class="wrapper">
+		<p>Estas son las preguntas que van en cabeza dentro de cada categoria.</p>
+			<a class="tab" id="alumnos">Alumnos</a>
+			<a class="tab" id="pdi">PDI</a>
+			<a class="tab" id="pas">PAS</a>
+			<ul></ul>
+	</div>

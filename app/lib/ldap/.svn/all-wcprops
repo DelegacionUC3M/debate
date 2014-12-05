@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/Drimmark/debate.git/!svn/ver/3/trunk/app/lib/ldap
+END
+ldap_exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/Drimmark/debate.git/!svn/ver/3/trunk/app/lib/ldap/ldap_exception.php
+END
+ldap_api.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/Drimmark/debate.git/!svn/ver/3/trunk/app/lib/ldap/ldap_api.php
+END

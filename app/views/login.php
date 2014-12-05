@@ -1,17 +1,13 @@
-<section id="login">
+<div class="wrapper">
+	<h2>Entrar a Debate a Rector</h2>
+	<p>Está intentando acceder a un área protegida. </br> Introduzca su usuario y contraseña:</p>
 
-	<div class="wrapper">
-		<h2>Entrar a Preguntas del debate</h2>
-		<p>Está intentando acceder a un área protegida. </br> Introduzca su usuario y contraseña:</p>
+	<p class="error"><?php echo isset($error) ? $error : '' ?></p>
+	
+	<form class="<?php echo isset($error) ? 'error' : '' ?>" action="?<?php if (isset($_GET['url'])) {echo 'url='.$_GET['url'];} ?>" method="post">
+		<input type="text" name="nia" id="nia" placeholder="NIA" />
+		<input type="password" id="password" name="password" placeholder="Contraseña" />
 
-		<p class="error"><?php echo isset($error) ? $error : '' ?></p>
-		
-		<form action="?<?php if (isset($_GET['url'])) {echo 'url='.$_GET['url'];} ?>" method="post">
-			<input type="text" name="nia" id="nia" placeholder="Usuario" />
-			<input type="password" id="password" name="password" placeholder="Contraseña" />
-
-			<input type="submit" value="Entrar" />
-		</form>
-	</div>
-
-</section>
+		<button type="submit" value="Entrar">Entrar</button>
+	</form>
+</div>

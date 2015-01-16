@@ -1,0 +1,285 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/debate.eot?-xuph9k');
+  src: url('fonts/debate.eot?#iefix-xuph9k') format('embedded-opentype'), url('fonts/debate.woff?-xuph9k') format('woff'), url('fonts/debate.ttf?-xuph9k') format('truetype'), url('fonts/debate.svg?-xuph9k#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-print:before {
+  content: "\31";
+}
+.icon-debate:before {
+  content: "\64";
+}
+.icon-fill:before {
+  content: "\32";
+}
+.icon-agroup:before {
+  content: "\33";
+}
+.icon-map:before {
+  content: "\34";
+}
+.icon-clock:before {
+  content: "\35";
+}
+.icon-comment:before {
+  content: "\36";
+}
+.icon-user:before {
+  content: "\37";
+}
+.icon-signin:before {
+  content: "\38";
+}
+.icon-signout:before {
+  content: "\39";
+}
+.icon-back:before {
+  content: "\61";
+}
+.icon-facebook:before {
+  content: "\62";
+}
+.icon-twitter:before {
+  content: "\63";
+}
+html {
+  font-family: 'Roboto', sans-serif;
+  background: #EDEFF2;
+  color: #2b2b2b;
+}
+a {
+  outline: none;
+  text-decoration: none;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.print {
+  display: none;
+}
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+textarea,
+select {
+  border: 1px solid #e3e3e3;
+  padding: 4px 6px;
+  border-radius: 4px;
+  outline: 0;
+  color: #747373;
+}
+input[type="text"]:hover,
+input[type="password"]:hover,
+textarea:hover,
+select:hover,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #747373;
+}
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+header {
+  background: #fff;
+  padding: 19px 0;
+}
+header h1 {
+  font-size: 2.7em;
+  color: #006394;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+header img {
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+header #user {
+  float: right;
+  font-size: 0.95em;
+  margin-top: 15px;
+}
+header #user a {
+  padding: 8px 23px;
+  border-radius: 5px;
+  border: 1px solid #bad4e2;
+  color: #006191;
+}
+.main #inicio,
+.main #login {
+  background: linear-gradient(rgba(0, 97, 145, 0.65), rgba(0, 97, 145, 0.65)), url('/debate/assets/img/Geta.jpg') center;
+  box-shadow: 0 0 4px 0 #2b2b2b;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+.main #inicioPregunta {
+  color: #585858;
+  text-align: center;
+}
+.main #inicioPregunta h2,
+.main #inicio h2,
+.main #login h2,
+.main #inicioPregunta h3,
+.main #inicio h3,
+.main #login h3 {
+  border-bottom: none;
+  color: #fff;
+}
+.main #inicioPregunta h2,
+.main #inicio h2,
+.main #login h2 {
+  font-size: 2em;
+  margin: 30px 0;
+}
+.main #inicioPregunta p,
+.main #inicio p,
+.main #login p,
+.main #inicioPregunta ul,
+.main #inicio ul,
+.main #login ul {
+  margin: 0;
+  padding: 0;
+}
+.main #inicioPregunta,
+.main #inicio {
+  padding: 50px 0 70px;
+}
+.main #inicioPregunta li,
+.main #inicio li {
+  list-style: none;
+  display: inline-block;
+  width: 50%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+.main #inicioPregunta li p,
+.main #inicio li p {
+  text-align: justify;
+}
+.main #login {
+  padding: 50px 0;
+}
+.main #login p.error {
+  color: red;
+  font-weight: bold;
+}
+.main #login form {
+  margin: 20px 0;
+}
+.main #login input[type="submit"],
+.main #login input[type="text"],
+.main #login input[type="password"] {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  padding: 10px 15px;
+  background: #cddde5;
+  border-color: #145573;
+}
+.main #login input[type="submit"]:hover,
+.main #login input[type="text"]:hover,
+.main #login input[type="password"]:hover {
+  border-color: #145573;
+}
+.main #login input[type="text"] {
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+}
+.main #login input[type="password"] {
+  border-top: 1px solid  #9fadb1;
+  border-radius: 0 0 5px 5px;
+}
+.main #login input[type="password"]:hover {
+  border-top: 1px solid  #9fadb1;
+}
+.main #login input[type="submit"] {
+  margin-top: 30px;
+  background: #006191;
+  color: #fff;
+}
+footer {
+  font-size: 0.9em;
+  background: #fff;
+  box-shadow: 0 0 6px 0 #2b2b2b;
+  padding: 15px 0;
+}
+footer #rsociales {
+  margin: 20px 0;
+  text-align: center;
+}
+footer #copy {
+  border-top: 1px solid #e3e3e3;
+  text-align: center;
+  padding: 20px 0;
+}
+footer h2 {
+  margin: 0;
+  color: #006394;
+}
+footer i {
+  margin: 0 5px 0 15px;
+}
+footer i,
+footer a,
+footer span {
+  display: inline-block;
+  vertical-align: top;
+}
+footer span {
+  max-width: 500px;
+}
+@media print {
+  body {
+    font-size: 12px;
+  }
+  .print {
+    display: inline-block;
+  }
+  .no-print {
+    display: none;
+  }
+  header #user,
+  h2,
+  footer {
+    display: none;
+  }
+  ul#comentarios li {
+    margin: 4px auto !important;
+    width: 100%;
+    border-top: 1px solid #a6b0be !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-radius: 0 !important;
+  }
+  ul#comentarios li div {
+    border-bottom: 1px dashed #a6b0be !important;
+  }
+  ul#comentarios li.compose {
+    display: none;
+  }
+}

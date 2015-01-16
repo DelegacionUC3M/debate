@@ -4,10 +4,10 @@ class inicioController extends Controller {
 	
 	function index() {
 		if ($this->security(false)) {
-			//$this->panel();
-			$this->logout();
+			$this->panel();
 		} else {
-			$this->render('inicio');
+			$preguntas = Pregunta::findAll();
+			$this->render('inicio', array('preguntas' => $preguntas));
 		}
 	}
 
@@ -26,7 +26,7 @@ class inicioController extends Controller {
 						if(isset($_GET['url'])) {	
 							header('Location: ' . $_GET['url']);
 						} else {
-							header('Location: /debate/inicio');
+							header('Location: /debate/inicio/panel');
 						}
 					} else {
 						$error = 'Usuario o contraseña incorrectos.';
@@ -48,5 +48,62 @@ class inicioController extends Controller {
 		session_destroy();
    		session_regenerate_id(true);
 		header('Location: /debate/inicio');
+	}
+	function panel() {
+		if(!$this->security(false)) header('Location: /debate/inicio');	
+		$preguntas = new Pregunta();
+		$likes = new Like();
+		if (isset($_POST['pregunta'])) {
+			if(!empty($_POST['pregunta'])){
+				if($preguntas->isSetText(htmlspecialchars($_POST['pregunta']))){
+					$data['error'] = 'Ya existe la pregunta';
+				}else{
+					$preguntas->uid = $_SESSION['user']->uid;
+					$preguntas->author = $_SESSION['user']->cn;
+					$preguntas->text = htmlspecialchars($_POST['pregunta']);
+					$preguntas->category = $_SESSION['user']->category;
+					$preguntas->likes = 0;
+					$preguntas->save();
+				}
+			}else{
+				$data['error'] = 'Debes escribir una pregunta.';
+			}
+		}
+		if (isset($_POST['like'])) {
+			if($likes->isSetLike($_SESSION['user']->uid,$likes->getId(htmlspecialchars($_POST['pregunta_like'])))){
+				$data['error'] = 'Ya has hecho like en esa pregunta.';
+			}else{
+				if($likes->ownLike($_SESSION['user']->uid,$likes->getId(htmlspecialchars($_POST['pregunta_like'])))){
+					$data['error'] = 'No puedes hacerte like a ti mismo.';
+				}else{
+					$likes->uid = $_SESSION['user']->uid;
+					$likes->author = $_SESSION['user']->cn;
+					$likes->id = $likes->getId(htmlspecialchars($_POST['pregunta_like']));
+					$preguntas->upgradeLikes($likes->id,$likes->getLikes($likes->id));
+					$likes->save();
+				}
+			}	
+		}
+		$data['preguntas'] = Pregunta::findByCategory($_SESSION['user']->category); 
+		$this->render('panel',$data);	
+	}
+	function preguntas() {
+		$category = $_GET['type'];
+		header('Content-Type: application/json');
+		switch ($category) {
+			case 'alumnos':
+				echo json_encode(Pregunta::findByCategoryF('Alumnos'));
+				break;
+			case 'pdi':
+				echo json_encode(Pregunta::findByCategoryF('Personal Docente e Investigador'));
+				break;
+			case 'pas':
+				echo json_encode(Pregunta::findByCategoryF('Personal de Administracion y Servicios'));
+				break;
+			
+			default:
+				echo json_encode(array());
+				break;
+		}
 	}
 }

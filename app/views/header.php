@@ -7,9 +7,10 @@
 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	
         <link rel="stylesheet" href="/debate/assets/css/normalize.min.css">
         <link rel="stylesheet" href="/debate/assets/css/main.css">
+        <script src="/debate/assets/js/vendor/prefixfree.min.js"></script>
 
         <script src="/debate/assets/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -22,18 +23,18 @@
             <div class="wrapper clear">
 
                 <div id="user">
-                    <?php if ($user) { ?>
-                        <span>Hola, <?= $user->name; ?> </span>
-                        <a href="/debate/inicio/logout">Salir</a>
+                    <?php
+			         if($user) { ?>
+                        <span>Hola, <?= $user->cn; ?> </span>
+                        <a class="logout" href="/debate/inicio/logout">Salir</a>
                     <?php } else { ?>
                         <a href="/debate/inicio/login">Entrar</a>
                     <?php } ?>
                 </div>
-
-                <a href="/debate/inicio"> <h1>Preguntas para el debate</h1> </a>
-                <a href="http://delegacion.uc3m.es" target="_blank"> <img src="/debate/assets/img/delegacion.png" /> </a>
+                <a href="/debate/inicio"> <h1>Debate a Rector</h1> </a>
+                <a href="http://delegacion.uc3m.es" target="_blank"> <img src="/debate/assets/img/delegacion.png"> </a>
 
             </div>
         </header>
 
-        <div class="main">
+        <div class="main <?php echo isset($section) ? $section : '' ?> ">

@@ -21,6 +21,4 @@ define('SQL_HOST', 'localhost');
 define('SQL_DB', 'debate');
 define('SQL_PASSWD', 'password');
 define('SQL_USER', 'debate');
-// define('SQL_PASSWD', '287985cc819fadb6dba56c24938c971e');
-// define('SQL_USER', 'debate');
 define('SQL_PORT', 3306);

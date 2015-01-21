@@ -10,7 +10,7 @@ class Like {
 	public function save(){
 		$db = new DB;
 		$db->run('INSERT INTO `like` (id_pregunta, uid, author, date) VALUES (?,?,?,NOW())',
-				array($this->id,$this->uid, $this->author));
+				array($this->id_pregunta,$this->uid, $this->author));
 	}
 	
 	public static function getLikes($id){

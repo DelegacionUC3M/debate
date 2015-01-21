@@ -58,6 +58,9 @@
 .icon-twitter:before {
   content: "\63";
 }
+.icon-like:before {
+  content: "\64";
+}
 html {
   font-family: 'Roboto', sans-serif;
   background: #e1e1e1;

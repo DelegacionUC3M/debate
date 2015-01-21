@@ -70,16 +70,16 @@ class inicioController extends Controller {
 			}
 		}
 		if (isset($_POST['like'])) {
-			if($likes->isSetLike($_SESSION['user']->uid,$likes->getId(htmlspecialchars($_POST['pregunta_like'])))){
+			if($likes->isSetLike($_SESSION['user']->uid,$_POST['pregunta_like'])){
 				$data['error'] = 'Ya has hecho like en esa pregunta.';
 			}else{
-				if($likes->ownLike($_SESSION['user']->uid,$likes->getId(htmlspecialchars($_POST['pregunta_like'])))){
+				if($likes->ownLike($_SESSION['user']->uid,$_POST['pregunta_like'])){
 					$data['error'] = 'No puedes hacerte like a ti mismo.';
 				}else{
 					$likes->uid = $_SESSION['user']->uid;
 					$likes->author = $_SESSION['user']->cn;
-					$likes->id = $likes->getId(htmlspecialchars($_POST['pregunta_like']));
-					$preguntas->upgradeLikes($likes->id,$likes->getLikes($likes->id));
+					$likes->id_pregunta = $_POST['pregunta_like'];
+					$preguntas->upgradeLikes($likes->id_pregunta,$likes->getLikes($likes->id));
 					$likes->save();
 				}
 			}	

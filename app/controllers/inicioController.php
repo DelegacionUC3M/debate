@@ -79,7 +79,7 @@ class inicioController extends Controller {
 					$likes->uid = $_SESSION['user']->uid;
 					$likes->author = $_SESSION['user']->cn;
 					$likes->id_pregunta = $_POST['pregunta_like'];
-					$preguntas->upgradeLikes($likes->id_pregunta,$likes->getLikes($likes->id));
+					$preguntas->upgradeLikes($likes->id_pregunta,$likes->getLikes($likes->id_pregunta));
 					$likes->save();
 				}
 			}	

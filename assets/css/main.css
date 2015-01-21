@@ -58,6 +58,9 @@
 .icon-twitter:before {
   content: "\63";
 }
+.icon-like:before {
+  content: "\65";
+}
 html {
   font-family: 'Roboto', sans-serif;
   background: #e1e1e1;
@@ -360,12 +363,15 @@ body {
 }
 .main #panel ul#preguntas li form button {
   display: inline;
-  width: 100px;
+  width: 45px;
   height: 42px;
   line-height: 42px;
   text-align: center;
   margin: 0 0;
   padding: 0 0;
+}
+.main #panel ul#preguntas li form button:before {
+  margin: 0;
 }
 .main #panel li {
   display: inline-block;

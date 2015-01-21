@@ -16,12 +16,12 @@
 				if(isset($preguntas)){
 					foreach($preguntas as $pregunta){ ?>
 					<li class='pregunta'>
-						<form id="like" action="/debate/inicio/panel" method="post">
-							<div id="texto">
-								<input type="hidden" name="pregunta_like" value="<?php echo $pregunta->text?>"> <?php echo $pregunta->text?>
+						<form class="like" action="/debate/inicio/panel" method="post">
+							<div class="texto">
+								<input type="hidden" name="pregunta_like" value="<?php echo $pregunta->id?>"> <?php echo $pregunta->text?>
 								<p><?php echo $pregunta->likes?></p>
 							</div>
-							<button id="like" type="submit" name="like" value="LIKE">Me gusta</button>
+							<button class="like icon-like" type="submit" name="like" value=""></button>
 						</form>
 					</li>
 					<?php }

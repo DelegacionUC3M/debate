@@ -64,6 +64,9 @@
 .icon-twitter:before {
 	content: "\63";
 }
+.icon-like:before {
+	content: "\65";
+}
 
 @blue: #066394;
 @blue-light: #bad5e2;
@@ -400,12 +403,16 @@ html, body {
 
 					button {
 						display: inline;
-						width: 100px;
+						width: 45px;
 						height: 42px;
 						line-height: 42px;
 						text-align: center;
 						margin: 0 0; 
 						padding: 0 0;
+
+						&:before {
+							margin: 0;
+						}
 					}
 				}
 			}

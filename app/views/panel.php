@@ -21,7 +21,11 @@
 								<input type="hidden" name="pregunta_like" value="<?php echo $pregunta->id?>"> <?php echo $pregunta->text?>
 								<p><?php echo $pregunta->likes?></p>
 							</div>
-							<button class="like icon-like" type="submit" name="like" value=""></button>
+							<?php if ($pregunta->uid != $user->uid) { ?>
+								<button class="like icon-like" type="submit" name="like" value=""></button>
+							<?php } else { ?>
+								<button class="trash icon-trash" type="submit" name="delete" value=""></button>
+							<?php } ?>
 						</form>
 					</li>
 					<?php }

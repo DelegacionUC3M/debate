@@ -49,6 +49,7 @@ class inicioController extends Controller {
    		session_regenerate_id(true);
 		header('Location: /debate/inicio');
 	}
+
 	function panel() {
 		if(!$this->security(false)) header('Location: /debate/inicio');	
 		$preguntas = new Pregunta();
@@ -69,6 +70,7 @@ class inicioController extends Controller {
 				$data['error'] = 'Debes escribir una pregunta.';
 			}
 		}
+
 		if (isset($_POST['like'])) {
 			if($likes->isSetLike($_SESSION['user']->uid,$_POST['pregunta_like'])){
 				$data['error'] = 'Ya has hecho like en esa pregunta.';
@@ -84,9 +86,20 @@ class inicioController extends Controller {
 				}
 			}	
 		}
+
+		if (isset($_POST['delete'])) {
+			$preguntas = Pregunta::findById($_POST['pregunta_like']);
+			if ($preguntas[0]->uid == $_SESSION['user']->uid) {
+				$preguntas[0]->remove();
+			} else {
+				$data['error'] = 'Solo puedes borrar tus preguntas';
+			}
+		}
+
 		$data['preguntas'] = Pregunta::findByCategory($_SESSION['user']->category); 
 		$this->render('panel',$data);	
 	}
+
 	function preguntas() {
 		$category = $_GET['type'];
 		header('Content-Type: application/json');

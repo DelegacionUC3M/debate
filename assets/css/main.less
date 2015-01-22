@@ -67,6 +67,10 @@
 .icon-like:before {
 	content: "\65";
 }
+.icon-trash:before {
+	content: "\66";
+}
+
 
 @blue: #066394;
 @blue-light: #bad5e2;
@@ -195,7 +199,7 @@ html, body {
 .main {
 	min-height: 500px;
 	min-height: 60vh;
-	min-height: ~"calc(100% - 93px - 194px)";
+	min-height: ~"calc(100% - 86px - 194px)";
 
 	h2 {
 		font-size: 1.7em;
@@ -353,7 +357,7 @@ html, body {
 		input[type="text"] {
 			display: inline-block;
 			margin: 0 0 0 20%;
-			width: 300px;
+			width: 450px;
 			padding: 12px 15px;
 			background: rgba(255, 255, 255, 0.8);
 			border-color: rgba(0, 0, 0, 0.55);
@@ -413,6 +417,19 @@ html, body {
 						&:before {
 							margin: 0;
 						}
+
+						&.trash {
+							background: transparent;
+							color: #898989;
+							border: none;
+							box-shadow: none;
+							text-shadow: none;
+							transition: all 0.4s;
+							
+							&:hover {
+								color: #000;
+							}
+						}
 					}
 				}
 			}
@@ -425,7 +442,7 @@ html, body {
 
 		button {
 			display: inline-block;
-			width: 300px;
+			width: 150px;
 			box-sizing: border-box;
 			padding:  12px 15px;
 			text-shadow: -1px 0 4px rgba(0, 0, 0, 0.55);

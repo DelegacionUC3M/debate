@@ -16,21 +16,21 @@ class adminController extends Controller {
 
 		echo "PEPEPEPEPEPEP";
 		if(!$this->security(false)) header('Location: /debate/inicio');	
-		$preguntas = new Pregunta();
+		$pregunta = new Pregunta();
 
 		//Solo se quieren poder borrar preguntas, los if para like o introducir preguntas sobrarían.
 		//Tampoco haría falta comprobar si es el dueño de la pregunta ya que el administrador debería 
 		//poder borrar todo.
 		if (isset($_POST['delete'])) {
-			$preguntas = Pregunta::findById($_POST['pregunta_like']);
-			$preguntas[0]->remove();
+			$pregunta = Pregunta::findById($_POST['pregunta_like']);
+			$pregunta[0]->remove();
 		}
 		
 		//Un array de 3 posiciones en las que cada posición es un array de preguntas de cada grupo.
 		$arrayAlumnos = Pregunta::findByCategory('alumnos');
 		$arrayPDI = Pregunta::findByCategory('pdi');
 		$arrayPAS = Pregunta::findByCategory('pas');
-		$this->render('admin', array('Alumnos' => $arrayAlumnos,'PDI' => $arrayPDI,'PAS' => $arrayPAS));
+		$this->render('admin', array('alumnos' => $arrayAlumnos,'pdi' => $arrayPDI,'pas' => $arrayPAS));
 	}
 
 	function preguntas() {

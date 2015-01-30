@@ -5,9 +5,9 @@
 		<ul id='preguntas'>
 				<?php
 				if(isset($preguntas)){
-					foreach($preguntas as $pregunta){ ?>
+					foreach($alumnos as $pregunta){ ?>
 					<li class='pregunta'>
-						<form class="like" action="/debate/admin/admin" method="post">
+						<form class="like" action="/debate/admin/" method="post">
 							<div class="texto">
 								<input type="hidden" name="pregunta_like" value="<?php echo $pregunta->id?>"> <?php echo $pregunta->text?>
 								<p><?php echo $pregunta->likes?></p>

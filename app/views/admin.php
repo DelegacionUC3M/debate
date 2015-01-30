@@ -2,6 +2,14 @@
 
 	<div class="lista">
 		<?php echo isset($data['error']) ? '<p class="info error">' . $data['error'] . '</p>' : '' ?>
+			
+		<span class='menu'>Categorias 
+		    <ul>
+			    <li><a class="tab" id="alumnos">Alumnos</a></li>
+				<li><a class="tab" id="pdi">PDI</a></li>
+				<li><a class="tab" id="pas">PAS</a></li>
+		    </ul>
+		  </span>
 		<ul id='preguntas'>
 				<?php
 				if(isset($alumnos)){

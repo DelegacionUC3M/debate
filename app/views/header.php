@@ -33,9 +33,6 @@
                     <?php   }
                     } else { ?>
                         <a href="/debate/inicio/login">Entrar</a>
-                    <?php } 
-                    
-                   
                     <?php } ?>
                 </div>
                 <a href="/debate/inicio"> <h1>Debate a Rector</h1> </a>

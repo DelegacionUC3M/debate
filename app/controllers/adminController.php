@@ -27,7 +27,7 @@ class adminController extends Controller {
 		//PRUEBAAAAAAAAAAAAAAAAAAAAAAAAAA
 		if(!$this->security(false)) header('Location: /debate/inicio');	
 		$preguntas = new Pregunta();
-		$likes = new Like();
+		/* No va a postear preguntas 
 		if (isset($_POST['pregunta'])) {
 			if(!empty($_POST['pregunta'])){
 				if($preguntas->isSetText(htmlspecialchars($_POST['pregunta']))){
@@ -44,7 +44,9 @@ class adminController extends Controller {
 				$data['error'] = 'Debes escribir una pregunta.';
 			}
 		}
+		*/
 
+		/*No va a darle like a nada
 		if (isset($_POST['like'])) {
 			if($likes->isSetLike($_SESSION['user']->uid,$_POST['pregunta_like'])){
 				$data['error'] = 'Ya has hecho like en esa pregunta.';
@@ -60,14 +62,11 @@ class adminController extends Controller {
 				}
 			}	
 		}
-
+	*/
+		//Si va a borrar preguntas sin necesidad de comprobar si es el dueño de la pregunta.
 		if (isset($_POST['delete'])) {
 			$preguntas = Pregunta::findById($_POST['pregunta_like']);
-			if ($preguntas[0]->uid == $_SESSION['user']->uid) {
 				$preguntas[0]->remove();
-			} else {
-				$data['error'] = 'Solo puedes borrar tus preguntas';
-			}
 		}
 //PRUEBAAAAAAAAAAAAAAAAAAAAAAAAAA//PRUEBAAAAAAAAAAAAAAAAAAAAAAAAAA//PRUEBAAAAAAAAAAAAAAAAAAAAAAAAAA
 
@@ -76,7 +75,7 @@ class adminController extends Controller {
 		$arrayAlumnos = Pregunta::findByCategory('alumnos');
 		$arrayPDI = Pregunta::findByCategory('pdi');
 		$arrayPAS = Pregunta::findByCategory('pas');
-		$this->render('admin', array('Alumnos' => $arrayAlumnos,'PDI' => $arrayPDI,'PAS' => $arrayPAS));
+		$this->render('admin', array('Alumnos' => $arrayAlumnos/*,'PDI' => $arrayPDI,'PAS' => $arrayPAS)*/);
 	}
 
 	function preguntas() {

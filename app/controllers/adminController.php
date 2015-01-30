@@ -29,6 +29,6 @@ class adminController extends Controller {
 		$arrayAlumnos = Pregunta::findByCategory('alumnos');
 		$arrayPDI = Pregunta::findByCategory('pdi');
 		$arrayPAS = Pregunta::findByCategory('pas');
-		$this->render('admin', array('Alumnos' => $arrayAlumnos,'PDI' => $arrayPDI,'PAS' => $arrayPAS))
+		$this->render('admin', array('Alumnos' => $arrayAlumnos,'PDI' => $arrayPDI,'PAS' => $arrayPAS));
 	}
 }

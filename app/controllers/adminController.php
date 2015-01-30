@@ -13,8 +13,7 @@ class adminController extends Controller {
 
 	//Función necesaria para que el caso de que la seguridad falle? exista el método panel de this.
 	function panel() {
-
-		echo "PEPEPEPEPEPEP";
+		
 		if(!$this->security(false)) header('Location: /debate/inicio');	
 		$pregunta = new Pregunta();
 

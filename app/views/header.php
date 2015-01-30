@@ -27,8 +27,15 @@
 			         if($user) { ?>
                         <span>Hola, <?= $user->cn; ?> </span>
                         <a class="logout" href="/debate/inicio/logout">Salir</a>
-                    <?php } else { ?>
+                        <!-- Si el usuario es administrador, además le aparece el boton de admin -->
+                       <?php if ($user->rol == 100){ ?>
+                                <a class="admin" href="/debate/admin/">Admin</a>
+                    <?php   }
+                    } else { ?>
                         <a href="/debate/inicio/login">Entrar</a>
+                    <?php } 
+                    
+                   
                     <?php } ?>
                 </div>
                 <a href="/debate/inicio"> <h1>Debate a Rector</h1> </a>

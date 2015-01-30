@@ -40,7 +40,7 @@ class Pregunta {
 
 	public static function findByCategory($category){
 		$db = new DB;
-		$db->run('SELECT * FROM pregunta WHERE category=?', array($category));
+		$db->run('SELECT * FROM pregunta WHERE category=?' , array($category));
 		$data = $db->data();
 		$debate = array();
 		foreach($data as $row){

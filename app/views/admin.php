@@ -4,7 +4,7 @@
 		<?php echo isset($data['error']) ? '<p class="info error">' . $data['error'] . '</p>' : '' ?>
 		<ul id='preguntas'>
 				<?php
-				if(isset($preguntas)){
+				if(isset($alumnos)){
 					foreach($alumnos as $pregunta){ ?>
 					<li class='pregunta'>
 						<form class="like" action="/debate/admin/" method="post">

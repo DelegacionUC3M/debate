@@ -71,11 +71,31 @@ class adminController extends Controller {
 		}
 //PRUEBAAAAAAAAAAAAAAAAAAAAAAAAAA//PRUEBAAAAAAAAAAAAAAAAAAAAAAAAAA//PRUEBAAAAAAAAAAAAAAAAAAAAAAAAAA
 
-		
+
 		//Un array de 3 posiciones en las que cada posición es un array de preguntas de cada grupo.
 		$arrayAlumnos = Pregunta::findByCategory('alumnos');
 		$arrayPDI = Pregunta::findByCategory('pdi');
 		$arrayPAS = Pregunta::findByCategory('pas');
 		$this->render('admin', array('Alumnos' => $arrayAlumnos,'PDI' => $arrayPDI,'PAS' => $arrayPAS));
+	}
+
+	function preguntas() {
+		$category = $_GET['type'];
+		header('Content-Type: application/json');
+		switch ($category) {
+			case 'alumnos':
+				echo json_encode(Pregunta::findByCategoryF('Alumnos'));
+				break;
+			case 'pdi':
+				echo json_encode(Pregunta::findByCategoryF('Personal Docente e Investigador'));
+				break;
+			case 'pas':
+				echo json_encode(Pregunta::findByCategoryF('Personal de Administracion y Servicios'));
+				break;
+			
+			default:
+				echo json_encode(array());
+				break;
+		}
 	}
 }

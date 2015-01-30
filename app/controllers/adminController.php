@@ -34,14 +34,20 @@ class adminController extends Controller {
 	function preguntas() {
 		$category = $_GET['type'];
 		header('Content-Type: application/json');
-		if (isset($category)){
-			echo json_encode(Pregunta::findByCategoryF('Alumnos'));
-			echo json_encode(Pregunta::findByCategoryF('Personal Docente e Investigador'));
-			echo json_encode(Pregunta::findByCategoryF('Personal de Administracion y Servicios'));
-		}
-		else{
-			echo json_encode(array());
-			break;
+		switch ($category) {
+			case 'alumnos':
+				echo json_encode(Pregunta::findByCategoryF('Alumnos'));
+				break;
+			case 'pdi':
+				echo json_encode(Pregunta::findByCategoryF('Personal Docente e Investigador'));
+				break;
+			case 'pas':
+				echo json_encode(Pregunta::findByCategoryF('Personal de Administracion y Servicios'));
+				break;
+			
+			default:
+				echo json_encode(array());
+				break;
 		}
 	}
 }

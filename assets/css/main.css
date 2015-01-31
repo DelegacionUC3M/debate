@@ -306,18 +306,22 @@ body {
 .main.login button:active {
   margin-top: 33px;
 }
-.main #panel {
+.main #panel,
+.main #admin {
   padding: 30px 0;
   border-spacing: 0 80px;
 }
-.main #panel p.error {
+.main #panel p.error,
+.main #admin p.error {
   color: #FF2F2F;
   font-weight: bold;
 }
-.main #panel form.error input[type="text"] {
+.main #panel form.error input[type="text"],
+.main #admin form.error input[type="text"] {
   border-color: rgba(128, 0, 0, 0.75) !important;
 }
-.main #panel input[type="text"] {
+.main #panel input[type="text"],
+.main #admin input[type="text"] {
   display: inline-block;
   margin: 0 0 0 20%;
   width: 450px;
@@ -326,28 +330,33 @@ body {
   border-color: rgba(0, 0, 0, 0.55);
   box-sizing: border-box;
 }
-.main #panel input[type="text"] {
+.main #panel input[type="text"],
+.main #admin input[type="text"] {
   border-radius: 5px 5px 5px 5px;
 }
-.main #panel ul#preguntas {
+.main #panel ul#preguntas,
+.main #admin ul#preguntas {
   text-align: center;
   margin: auto;
   width: 70%;
   margin-top: 5%;
 }
-.main #panel ul#preguntas li {
+.main #panel ul#preguntas li,
+.main #admin ul#preguntas li {
   width: 100%;
   height: 45px;
   margin: 2% 0;
   display: flex;
   flex-wrap: no-wrap;
 }
-.main #panel ul#preguntas li form {
+.main #panel ul#preguntas li form,
+.main #admin ul#preguntas li form {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-.main #panel ul#preguntas li form div {
+.main #panel ul#preguntas li form div,
+.main #admin ul#preguntas li form div {
   display: inline-block;
   width: calc(100% - 200px);
   height: 100%;
@@ -355,7 +364,8 @@ body {
   position: relative;
   margin: 0;
 }
-.main #panel ul#preguntas li form div p {
+.main #panel ul#preguntas li form div p,
+.main #admin ul#preguntas li form div p {
   position: absolute;
   display: inline-block;
   text-align: right;
@@ -364,7 +374,8 @@ body {
   top: 0;
   margin: 0 0;
 }
-.main #panel ul#preguntas li form button {
+.main #panel ul#preguntas li form button,
+.main #admin ul#preguntas li form button {
   display: inline;
   width: 45px;
   height: 42px;
@@ -373,10 +384,12 @@ body {
   margin: 0 0;
   padding: 0 0;
 }
-.main #panel ul#preguntas li form button:before {
+.main #panel ul#preguntas li form button:before,
+.main #admin ul#preguntas li form button:before {
   margin: 0;
 }
-.main #panel ul#preguntas li form button.trash {
+.main #panel ul#preguntas li form button.trash,
+.main #admin ul#preguntas li form button.trash {
   background: transparent;
   color: #898989;
   border: none;
@@ -384,14 +397,17 @@ body {
   text-shadow: none;
   transition: all 0.4s;
 }
-.main #panel ul#preguntas li form button.trash:hover {
+.main #panel ul#preguntas li form button.trash:hover,
+.main #admin ul#preguntas li form button.trash:hover {
   color: #000;
 }
-.main #panel li {
+.main #panel li,
+.main #admin li {
   display: inline-block;
   margin: auto 5%;
 }
-.main #panel button {
+.main #panel button,
+.main #admin button {
   display: inline-block;
   width: 150px;
   box-sizing: border-box;
@@ -401,8 +417,50 @@ body {
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.45);
   border-width: 3px;
 }
-.main #panel button:active {
+.main #panel button:active,
+.main #admin button:active {
   margin-top: 33px;
+}
+.main #admin span.menu a#nombre {
+  padding: 8px 23px;
+  border-radius: 5px;
+  border: 1px solid #bad5e2;
+  color: #006191;
+  width: 125px;
+}
+.main #admin span.menu ul {
+  display: none;
+  visibility: 0;
+  position: absolute;
+  width: 70px;
+  margin-top: 9px;
+  padding: 0;
+  width: 126px;
+}
+.main #admin span.menu ul li {
+  padding: 6%;
+  display: block;
+  height: 15px;
+  border: 1px solid #bad5e2;
+  color: #006191;
+  margin: -1px 0px 0px 0px;
+  text-align: center;
+}
+.main #admin span.menu ul li#ultimo {
+  border-radius: 0px 0px 7px 7px;
+}
+.main #admin span.menu:hover ul {
+  visibility: 1;
+  display: block;
+}
+.main #admin span.menu:hover li {
+  background: #ddd;
+}
+.main #admin span.menu:hover a#nombre {
+  border: 2px solid #004a6f;
+  border-radius: 5px 5px 0px 0px;
+  background: #066394;
+  color: #fff;
 }
 #pregunta {
   color: #585858;

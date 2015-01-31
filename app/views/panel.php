@@ -18,7 +18,7 @@
 					<li class='pregunta'>
 						<form class="like" action="/debate/inicio/panel" method="post">
 							<div class="texto">
-								<input type="hidden" name="pregunta_like" value="<?php echo $pregunta->id?>"> <?php echo $pregunta->text?>
+								<input type="hidden" name="pregunta_like" value="<?php echo $pregunta->id?>"><span><?php echo $pregunta->text?></span>
 								<p><?php echo $pregunta->likes?></p>
 							</div>
 							<?php if ($pregunta->uid != $user->uid) { ?>

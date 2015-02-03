@@ -26,7 +26,16 @@ $(function(){
 					$('#preguntaAdmin ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
 				}
 				$.each(data, function() {
-					$('#preguntaAdmin ul').append('<li><p>' + this.text + '</p><span>' + this.likes + '</span></li>');
+					$('#preguntaAdmin ul').append(
+							'<li class="pregunta">
+						<form class="like" action="/debate/admin/" method="post">
+							<div class="texto">
+								<input type="hidden" name="pregunta_like" value="' + data.id +'"> ' + data.text + '
+								<p>' + data.likes + '</p>
+							</div>
+								<button class="trash icon-trash" type="submit" name="delete" value=""></button>
+						</form>
+					</li>');
 				});
 			});
 			
@@ -59,15 +68,13 @@ $(function(){
 						$('#pregunta ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
 					}
 					$.each(data, function() {
-						$('#pregunta ul').append('<li class='pregunta'>
+						$('#pregunta ul').append(
+							'<li class="pregunta">
 						<form class="like" action="/debate/admin/" method="post">
 							<div class="texto">
-								<input type="hidden" name="pregunta_like" value="<?php echo $pregunta->id?>"> <?php echo $pregunta->text?>
-								<p><?php echo $pregunta->likes?></p>
+								<input type="hidden" name="pregunta_like" value="' + data.id +'"> ' + data.text + '
+								<p>' + data.likes + '</p>
 							</div>
-							<!-- La vista de admin en teoria solo tiene la opción de borrar preguntas, ya que es para 
-							controlarlas y no veo mucho sentido que un admin de like cuando para eso ya tendría su cuenta
-							de la uni -->
 								<button class="trash icon-trash" type="submit" name="delete" value=""></button>
 						</form>
 					</li>');

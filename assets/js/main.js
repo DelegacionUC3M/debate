@@ -17,7 +17,7 @@ $(function(){
 		});
 	});
 
-	$('#preguntaAdmin a.tab').on('click', function(){
+	$('#preguntaAdmin #categorias a.tab').on('click', function(){
 		var id = $(this).attr('id');
 		$.get('/debate/admin/preguntas?type=' + id, function(data) {
 			$('#preguntaAdmin ul').slideUp(400,function() {
@@ -51,7 +51,8 @@ $(function(){
 	}, 2000);
 
 	setInterval(function() {
-		var type = $('#preguntaAdmin ul').attr('id');
+		var type = 'alumnos';
+		$('type').on('click',type = $('#preguntaAdmin ul').attr('id'));
 		
 			if(type && type.length != 0) {
 				$.get('/debate/admin/preguntas?type=' + type, function(data) {

@@ -51,7 +51,7 @@ $(function(){
 	}, 2000);
 
 	setInterval(function() {
-		
+
 		$('type').on('click',type = $('#preguntaAdmin ul').attr('id'));
 		
 			if(type && type.length != 0) {
@@ -65,7 +65,6 @@ $(function(){
 					});
 				});
 			}
-		}
 	}, 3000);
 });
 

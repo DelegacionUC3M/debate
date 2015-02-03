@@ -18,7 +18,7 @@ $(function(){
 	});
 
 	$('#preguntaAdmin a.tab').on('click', function(){
-		var id = $(this).attr('id');
+		var id = $('#preguntaAdmin a.tab').attr('id');
 		$.get('/debate/admin/preguntas?type=' + id, function(data) {
 			$('#preguntaAdmin ul').slideUp(400,function() {
 				$('#preguntaAdmin ul').html('').attr('data-type',id);

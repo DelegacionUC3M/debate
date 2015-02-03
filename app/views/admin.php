@@ -3,14 +3,13 @@
 	<div class="lista">
 		<?php echo isset($data['error']) ? '<p class="info error">' . $data['error'] . '</p>' : '' ?>
 			
-		<span class='menu'>
-			<a id='nombre'>Categorias</a> 
-		    <ul>
-			    <li><a class="tab" id="alumnos">Alumnos</a></li>
-				<li><a class="tab" id="pdi">PDI</a></li>
-				<li id='ultimo'><a class="tab" id="pas">PAS</a></li>
-		    </ul>
-		  </span>
+		<div id="pregunta">
+			<div class="wrapper">
+				<a class="tab" id="alumnos">Alumnos</a>
+				<a class="tab" id="pdi">PDI</a>
+				<a class="tab" id="pas">PAS</a>
+			</div>
+		</div>	
 		<ul id='preguntas'>
 				<?php
 				if(isset($alumnos)){

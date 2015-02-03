@@ -15,45 +15,7 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.icon-print:before {
-  content: "\31";
-}
-.icon-debate:before {
-  content: "\64";
-}
-.icon-fill:before {
-  content: "\32";
-}
-.icon-agroup:before {
-  content: "\33";
-}
-.icon-map:before {
-  content: "\34";
-}
-.icon-clock:before {
-  content: "\35";
-}
-.icon-comment:before {
-  content: "\36";
-}
-.icon-user:before {
-  content: "\37";
-}
-.icon-signin:before {
-  content: "\38";
-}
-.icon-signout:before {
-  content: "\39";
-}
-.icon-back:before {
-  content: "\61";
-}
-.icon-facebook:before {
-  content: "\62";
+
 }
 .icon-twitter:before {
   content: "\63";

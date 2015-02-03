@@ -21,7 +21,7 @@ $(function(){
 		var id = $(this).attr('id');
 		$.get('/debate/admin/preguntas?type=' + id, function(data) {
 			$('#preguntaAdmin ul').slideUp(400,function() {
-				$('#preguntaAdmin ul').html('').attr('id',id);
+				$('#preguntaAdmin ul').html('').attr('data-type',id);
 				if(data.length == 0) {
 					$('#preguntaAdmin ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
 				}

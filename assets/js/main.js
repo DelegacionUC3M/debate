@@ -40,12 +40,14 @@ $(function(){
 		if(type && type.length != 0) {
 			$.get('/debate/inicio/preguntas?type=' + type, function(data) {
 				$('#pregunta ul').html('');
-				if(this.length == 0) {
+				if(data.length == 0) {
 					$('#pregunta ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
 				}
-				$.each(this, function() {
-					$('#pregunta ul').append('<li><p>' + this.text + '</p><span>' + this.likes + '</span></li>');
-				});
+				else{
+					$.each(data, function() {
+						$('#pregunta ul').append('<li><p>' + this.text + '</p><span>' + this.likes + '</span></li>');
+					});
+				}
 			});
 		}
 	}, 2000);

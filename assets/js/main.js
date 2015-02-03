@@ -54,7 +54,7 @@ $(function(){
 		type2 = $('#preguntaAdmin ul').attr('id');
 		
 			if(type2 && type2.length != 0) {
-				$.get('/debate/admin/preguntas?type=' + type2, function(data) {
+				$.get('/debate/admin/preguntas?type2=' + type2, function(data) {
 				$('#preguntaAdmin ul').html('');
 					if(data.length == 0) {
 						$('#preguntaAdmin ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');

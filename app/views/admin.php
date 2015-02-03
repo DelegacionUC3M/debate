@@ -7,7 +7,7 @@
 				<a class="tab" id="alumnos">Alumnos</a>
 				<a class="tab" id="pdi">PDI</a>
 				<a class="tab" id="pas">PAS</a>
-		</div>
+		
 		<ul id='preguntas'>
 				<?php
 				if(isset($alumnos)){
@@ -28,6 +28,6 @@
 				}		
 				?>
 		</ul>
+		</div>
 	</div>
-	
 </section>

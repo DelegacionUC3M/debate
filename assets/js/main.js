@@ -52,7 +52,7 @@ $(function(){
 
 	setInterval(function() {
 		var type = $('#preguntaAdmin ul').attr('id');
-		if (type == null){
+		if (type === null){
 		}
 		else{
 			if(type && type.length != 0) {

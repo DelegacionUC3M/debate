@@ -52,8 +52,6 @@ $(function(){
 
 	setInterval(function() {
 		var type = $('#pregunta ul').attr('id');
-		if(type && type.length != 0) {
-			if (type!=null){
 				$.get('/debate/admin/preguntas?type=' + type, function(data) {
 				$('#pregunta ul').html('');
 					if(data.length == 0) {
@@ -63,8 +61,8 @@ $(function(){
 						$('#pregunta ul').append('<li><p>' + this.text + '</p><span>' + this.likes + '</span></li>');
 					});
 				});
-			}
-		}
+			
+		
 	}, 2000);
 
 });

@@ -37,13 +37,13 @@ class adminController extends Controller {
 		header('Content-Type: application/json');
 		switch ($category) {
 			case 'alumnos':
-				echo json_encode(Pregunta::findByCategoryF('Alumnos'));
+				echo json_encode(Pregunta::findByCategory('Alumnos'));
 				break;
 			case 'pdi':
-				echo json_encode(Pregunta::findByCategoryF('Personal Docente e Investigador'));
+				echo json_encode(Pregunta::findByCategory('Personal Docente e Investigador'));
 				break;
 			case 'pas':
-				echo json_encode(Pregunta::findByCategoryF('Personal de Administracion y Servicios'));
+				echo json_encode(Pregunta::findByCategory('Personal de Administracion y Servicios'));
 				break;
 			
 			default:

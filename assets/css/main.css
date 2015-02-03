@@ -15,7 +15,45 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-print:before {
+  content: "\31";
+}
+.icon-debate:before {
+  content: "\64";
+}
+.icon-fill:before {
+  content: "\32";
+}
+.icon-agroup:before {
+  content: "\33";
+}
+.icon-map:before {
+  content: "\34";
+}
+.icon-clock:before {
+  content: "\35";
+}
+.icon-comment:before {
+  content: "\36";
+}
+.icon-user:before {
+  content: "\37";
+}
+.icon-signin:before {
+  content: "\38";
+}
+.icon-signout:before {
+  content: "\39";
+}
+.icon-back:before {
+  content: "\61";
+}
+.icon-facebook:before {
+  content: "\62";
 }
 .icon-twitter:before {
   content: "\63";
@@ -383,51 +421,6 @@ body {
 .main #admin button:active {
   margin-top: 33px;
 }
-.main #admin span.menu a#nombre {
-  padding: 8px 23px;
-  border-radius: 5px;
-  border: 1px solid #bad5e2;
-  color: #006191;
-  width: 125px;
-  transition: all 0.2s ease-in-out;
-}
-.main #admin span.menu ul {
-  display: block;
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  width: 70px;
-  margin-top: 9px;
-  padding: 0;
-  width: 126px;
-  transition: all 0.2s ease-in-out;
-}
-.main #admin span.menu ul li {
-  padding: 6%;
-  display: block;
-  height: 15px;
-  border: 1px solid #bad5e2;
-  color: #006191;
-  margin: 0px 0px 0px 0px;
-  text-align: center;
-  border-top: none;
-}
-.main #admin span.menu ul li#ultimo {
-  border-radius: 0px 0px 7px 7px;
-}
-.main #admin span.menu:hover ul {
-  visibility: visible;
-  opacity: 1;
-}
-.main #admin span.menu:hover li {
-  background: #ddd;
-}
-.main #admin span.menu:hover a#nombre {
-  border: 1px solid #004a6f;
-  border-radius: 5px 5px 0px 0px;
-  background: #066394;
-  color: #fff;
-}
 #pregunta {
   color: #585858;
   text-align: center;
@@ -475,6 +468,58 @@ body {
   vertical-align: middle;
 }
 #pregunta ul li span {
+  display: inline-block;
+  text-align: right;
+  font-weight: bold;
+  width: 20%;
+  vertical-align: middle;
+}
+#preguntaAdmin {
+  color: #585858;
+  text-align: center;
+  padding: 20px 0 20px;
+}
+#preguntaAdmin a {
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+#preguntaAdmin a.tab {
+  display: inline-block;
+  padding: 8px 23px;
+  border-radius: 5px;
+  border: 1px solid #bad5e2;
+  color: #006191;
+}
+#preguntaAdmin a.tab:hover {
+  background: #066394;
+  color: #fff;
+}
+#preguntaAdmin ul {
+  padding: 0 0;
+  display: inline-block;
+  width: 100%;
+}
+#preguntaAdmin ul li {
+  list-style: none;
+  display: inline-block;
+  line-height: 100%;
+  width: 50%;
+  padding: 0 1%;
+}
+#preguntaAdmin ul li.error {
+  background: #FEB2B2;
+  width: 90%;
+  margin: 10px auto;
+  font-weight: bold;
+}
+#preguntaAdmin ul li p {
+  display: inline-block;
+  text-align: left;
+  line-height: 100%;
+  width: 80%;
+  vertical-align: middle;
+}
+#preguntaAdmin ul li span {
   display: inline-block;
   text-align: right;
   font-weight: bold;

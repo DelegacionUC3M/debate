@@ -519,6 +519,68 @@ html, body {
 	}
 }
 
+
+#preguntaAdmin {
+	color: #585858;
+  	text-align: center;
+  	padding: 20px 0 20px;
+		
+	a {
+		text-align: center;
+		transition: all .3s ease-in-out;
+
+		&.tab {
+			display: inline-block;
+			padding: 8px 23px;
+			border-radius: 5px;
+			border: 1px solid @blue-light;
+			color: #006191;
+	
+			&:hover {
+				background: #066394;
+				color: #fff;
+			}
+		}
+	}
+
+	ul {
+		padding: 0 0;
+		display: inline-block;
+		width: 100%;
+
+		li {
+			list-style: none;
+			display: inline-block;
+			line-height: 100%;
+			width: 50%;
+			padding: 0 1%;
+
+			&.error {
+				background: #FEB2B2;
+				width: 90%;
+				margin: 10px auto;
+				font-weight: bold;
+			}
+			
+			p {
+				display: inline-block;
+				text-align: left;
+				line-height: 100%;
+				width: 80%;
+				vertical-align: middle;
+			}
+
+			span {
+				display: inline-block;
+				text-align: right;
+				font-weight: bold;
+				width: 20%;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
 footer {
 	font-size: 0.9em;
 	background: #fff;

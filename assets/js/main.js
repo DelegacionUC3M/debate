@@ -18,7 +18,7 @@ $(function(){
 	});
 
 	$('#preguntaAdmin a.tab').on('click', function(){
-		var id = $('#preguntaAdmin a.tab').attr('id');
+		var id = $(this).attr('id');
 		$.get('/debate/admin/preguntas?type=' + id, function(data) {
 			$('#preguntaAdmin ul').slideUp(400,function() {
 				$('#preguntaAdmin ul').html('').attr('data-type',id);
@@ -26,7 +26,7 @@ $(function(){
 					$('#preguntaAdmin ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
 				}
 				$.each(data, function() {
-					$('#preguntaAdmin ul').append('<li class="pregunta"><form class="like" action="/debate/admin/" method="post"><div class="texto"><input type="hidden" name="pregunta_like" value="' + data.id +'"> ' + data.text + '<p>' + data.likes + '</p></div><button class="trash icon-trash" type="submit" name="delete" value=""></button></form></li>');
+					$('#preguntaAdmin ul').append('<li class="pregunta"><form class="like" action="/debate/admin/" method="post"><div class="texto"><input type="hidden" name="pregunta_like" value="' + this.id +'"> ' + this.text + '<p>' + this.likes + '</p></div><button class="trash icon-trash" type="submit" name="delete" value=""></button></form></li>');
 				});
 			});
 			
@@ -59,7 +59,7 @@ $(function(){
 						$('#pregunta ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
 					}
 					$.each(data, function() {
-						$('#pregunta ul').append('<li class="pregunta"><form class="like" action="/debate/admin/" method="post"><div class="texto"><input type="hidden" name="pregunta_like" value="' + data.id +'"> ' + data.text + '<p>' + data.likes + '</p></div><button class="trash icon-trash" type="submit" name="delete" value=""></button></form></li>');
+						$('#pregunta ul').append('<li class="pregunta"><form class="like" action="/debate/admin/" method="post"><div class="texto"><input type="hidden" name="pregunta_like" value="' + this.id +'"> ' + this.text + '<p>' + this.likes + '</p></div><button class="trash icon-trash" type="submit" name="delete" value=""></button></form></li>');
 					});
 				});
 			

@@ -494,6 +494,38 @@ body {
   background: #066394;
   color: #fff;
 }
+#preguntaAdmin ul {
+  padding: 0 0;
+  display: inline-block;
+  width: 100%;
+}
+#preguntaAdmin ul li {
+  list-style: none;
+  display: inline-block;
+  line-height: 100%;
+  width: 50%;
+  padding: 0 1%;
+}
+#preguntaAdmin ul li.error {
+  background: #FEB2B2;
+  width: 90%;
+  margin: 10px auto;
+  font-weight: bold;
+}
+#preguntaAdmin ul li p {
+  display: inline-block;
+  text-align: left;
+  line-height: 100%;
+  width: 80%;
+  vertical-align: middle;
+}
+#preguntaAdmin ul li span {
+  display: inline-block;
+  text-align: right;
+  font-weight: bold;
+  width: 20%;
+  vertical-align: middle;
+}
 footer {
   font-size: 0.9em;
   background: #fff;

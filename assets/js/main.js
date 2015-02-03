@@ -26,7 +26,7 @@ $(function(){
 					$('#preguntaAdmin ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
 				}
 				$.each(data, function() {
-					$('#preguntaAdmin ul').append('<li class="pregunta"><form class="like" action="/debate/admin/" method="post"><div class="texto"><input type="hidden" name="pregunta_like" value="' + data.id->id +'"> ' + data.id->text + '<p>' + data.id->likes + '</p></div><button class="trash icon-trash" type="submit" name="delete" value=""></button></form></li>');
+					$('#preguntaAdmin ul').append('<li class="pregunta"><form class="like" action="/debate/admin/" method="post"><div class="texto"><input type="hidden" name="pregunta_like" value="' + data.id +'"> ' + data.text + '<p>' + data.likes + '</p></div><button class="trash icon-trash" type="submit" name="delete" value=""></button></form></li>');
 				});
 			});
 			
@@ -59,7 +59,7 @@ $(function(){
 						$('#pregunta ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
 					}
 					$.each(data, function() {
-						$('#pregunta ul').append('<li class="pregunta"><form class="like" action="/debate/admin/" method="post"><div class="texto"><input type="hidden" name="pregunta_like" value="' + data.id->id +'"> ' + data.id->text + '<p>' + data.id->likes + '</p></div><button class="trash icon-trash" type="submit" name="delete" value=""></button></form></li>');
+						$('#pregunta ul').append('<li class="pregunta"><form class="like" action="/debate/admin/" method="post"><div class="texto"><input type="hidden" name="pregunta_like" value="' + data.id->id +'"> ' + data.text + '<p>' + data.likes + '</p></div><button class="trash icon-trash" type="submit" name="delete" value=""></button></form></li>');
 					});
 				});
 			

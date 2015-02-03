@@ -20,6 +20,6 @@ date_default_timezone_set('Europe/Madrid');
 define('SQL_HOST', 'localhost');
 define('SQL_DB', 'debate');
 define('SQL_DB_DELEGADOS', 'delegados');
-define('SQL_PASSWD', 'drimmark.salen');
-define('SQL_USER', 'root');
+define('SQL_PASSWD', 'password');
+define('SQL_USER', 'debate');
 define('SQL_PORT', 3306);

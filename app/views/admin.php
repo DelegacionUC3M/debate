@@ -9,7 +9,7 @@
 				<a class="tab" id="pdi">PDI</a>
 				<a class="tab" id="pas">PAS</a>
 			</div>
-		<ul id='alumnos'>
+		<ul id='preguntas' data-type="alumnos">
 				<?php
 				if(isset($alumnos)){
 					foreach($alumnos as $pregunta){ ?>

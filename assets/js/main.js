@@ -21,7 +21,7 @@ $(function(){
 		var id = $(this).attr('id');
 		$.get('/debate/admin/preguntas?type=' + id, function(data) {
 			$('#preguntaAdmin ul').slideUp(400,function() {
-				$('#preguntaAdmin ul').html('').attr('id',id);
+				$('#preguntaAdmin ul').html('').attr('data-type',id);
 				if(data.length == 0) {
 					$('#preguntaAdmin ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
 				}
@@ -51,7 +51,7 @@ $(function(){
 	}, 2000);
 
 	setInterval(function() {
-		var type = $('#pregunta ul').attr('id');
+		var type = $('#pregunta ul').attr('data-type');
 				$.get('/debate/admin/preguntas?type=' + type, function(data) {
 				$('#pregunta ul').html('');
 					if(data.length == 0) {

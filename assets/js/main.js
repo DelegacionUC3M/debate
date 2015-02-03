@@ -51,10 +51,9 @@ $(function(){
 	}, 2000);
 
 	setInterval(function() {
-		var type = $('#preguntaAdmin ul').attr('id');
-		if (type == null){
-		}
-		else{
+		var type = 'alumnos';
+		type = $('#preguntaAdmin ul').attr('id');
+		
 			if(type && type.length != 0) {
 				$.get('/debate/admin/preguntas?type=' + type, function(data) {
 				$('#preguntaAdmin ul').html('');

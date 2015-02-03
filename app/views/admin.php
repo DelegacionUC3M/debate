@@ -4,10 +4,11 @@
 		<?php echo isset($data['error']) ? '<p class="info error">' . $data['error'] . '</p>' : '' ?>
 			
 		<div id="preguntaAdmin">
+			<div id='categorias'>
 				<a class="tab" id="alumnos">Alumnos</a>
 				<a class="tab" id="pdi">PDI</a>
 				<a class="tab" id="pas">PAS</a>
-		
+			</div>
 		<ul id='preguntas'>
 				<?php
 				if(isset($alumnos)){

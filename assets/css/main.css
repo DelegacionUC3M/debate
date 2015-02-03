@@ -477,6 +477,8 @@ body {
 #preguntaAdmin {
   color: #585858;
   text-align: center;
+}
+#preguntaAdmin #categoria {
   padding: 20px 0 20px;
 }
 #preguntaAdmin a {

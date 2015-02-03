@@ -51,7 +51,7 @@ $(function(){
 	}, 2000);
 
 	setInterval(function() {
-		var type = 'alumnos';
+		
 		$('type').on('click',type = $('#preguntaAdmin ul').attr('id'));
 		
 			if(type && type.length != 0) {

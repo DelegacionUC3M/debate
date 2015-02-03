@@ -17,7 +17,7 @@ $(function(){
 		});
 	});
 
-	$('#preguntaAdmin #categorias a.tab').on('click', function(){
+	$('#preguntaAdmin a.tab').on('click', function(){
 		var id = $(this).attr('id');
 		$.get('/debate/admin/preguntas?type=' + id, function(data) {
 			$('#preguntaAdmin ul').slideUp(400,function() {
@@ -49,22 +49,5 @@ $(function(){
 			});
 		}
 	}, 2000);
-
-	setInterval(function() {
-
-		$('type').on('click',type = $('#preguntaAdmin ul').attr('id'));
-		
-			if(type && type.length != 0) {
-				$.get('/debate/admin/preguntas?type=' + type, function(data) {
-				$('#preguntaAdmin ul').html('');
-					if(data.length == 0) {
-						$('#preguntaAdmin ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
-					}
-					$.each(data, function() {
-						$('#preguntaAdmin ul').append('<li><p>' + this.text + '</p><span>' + this.likes + '</span></li>');
-					});
-				});
-			}
-	}, 3000);
 });
 

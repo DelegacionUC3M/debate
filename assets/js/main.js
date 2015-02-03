@@ -49,12 +49,13 @@ $(function(){
 			});
 		}
 	}, 2000);
-	var type2 = 'alumnos';
+
 	setInterval(function() {
-		type2 = $('#preguntaAdmin ul').attr('id');
+		var type = 'alumnos';
+		$('type').on('click',type = $('#preguntaAdmin ul').attr('id'));
 		
-			if(type2 && type2.length != 0) {
-				$.get('/debate/admin/preguntas?type2=' + type2, function(data) {
+			if(type && type.length != 0) {
+				$.get('/debate/admin/preguntas?type=' + type, function(data) {
 				$('#preguntaAdmin ul').html('');
 					if(data.length == 0) {
 						$('#preguntaAdmin ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');

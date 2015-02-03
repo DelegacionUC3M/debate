@@ -59,10 +59,10 @@ $(function(){
 					$('#preguntaAdmin ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
 				}
 				$.each(data, function() {
-					$('#pregunta ul').append('<li><p>' + this.text + '</p><span>' + this.likes + '</span></li>');
+					$('#preguntaAdmin ul').append('<li><p>' + this.text + '</p><span>' + this.likes + '</span></li>');
 				});
 			});
 		}
-	}, 2000);
+	}, 3000);
 });
 

@@ -48,9 +48,9 @@ $(function(){
 			});
 	}, 2000);
 
-/*ADMIN
+//ADMIN
 	setInterval(function() {
-		var type = $('#pregunta ul').attr('data-type');
+		var type = $('#preguntaAdmin #preguntas').attr('data-type');
 				$.get('/debate/admin/preguntas?type=' + type, function(data) {
 					$('#pregunta ul').html('');
 					if(data.length == 0) {
@@ -61,6 +61,6 @@ $(function(){
 					});
 				});
 	}, 2000);
-*/
+
 });
 

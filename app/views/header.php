@@ -25,13 +25,13 @@
                 <div id="user">
                     <?php
 			         if($user) { ?>
-                     <!-- prueba2 -->
+                     <!-- prueba3 -->
                         <span>Hola, <?= $user->cn; ?> </span>
                         <a class="logout" href="/debate/inicio/logout">Salir</a>
                         <!-- Si el usuario es administrador, además le aparece el boton de admin -->
                        <?php if ($user->rol >= 100){ ?>
                         <a class="admin" href="/debate/admin/">Admin</a>
-                    <?php   echo "pepe"; }
+                    <?php  }
                     } else { ?>
                         <a href="/debate/inicio/login">Entrar</a>
                     <?php } ?>

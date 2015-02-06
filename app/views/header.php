@@ -24,7 +24,7 @@
 
                 <div id="user">
                     <?php
-			         if($user) { var_dump($user);?>     
+			         if($user) { ?>     
                      <!-- prueba3 -->
                         <span>Hola, <?= $user->cn; ?> </span>
                         <a class="logout" href="/debate/inicio/logout">Salir</a>

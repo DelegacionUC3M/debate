@@ -25,11 +25,10 @@
                 <div id="user">
                     <?php
 			         if($user) { ?>
-                        <span>Hola, <?= $user->cn; ?> </span>
-                        <?php if ($user->rol >= 100){ ?>
+                        <span>Hola, <?= $user->rol; ?> </span>
                         <a class="logout" href="/debate/inicio/logout">Salir</a>
                         <!-- Si el usuario es administrador, además le aparece el boton de admin -->
-                       <?php } if ($user->rol >= 100){ ?>
+                       <?php if ($user->rol >= 100){ ?>
                         <a class="admin" href="/debate/admin/">Admin</a>
                     <?php   }
                     } else { ?>

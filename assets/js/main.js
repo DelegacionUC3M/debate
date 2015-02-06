@@ -51,15 +51,15 @@ $(function(){
 //ADMIN
 	setInterval(function() {
 		var type = $('#pregunta ul').attr('data-type');
-				$.get('/debate/admin/preguntas?type=' + type, function(data) {
-					$('#pregunta ul').html('');
-					if(data.length == 0) {
-						$('#pregunta ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
-					}
-					$.each(data, function() {
-						$('#pregunta ul').append('<li class="pregunta"><form class="like" action="/debate/admin/" method="post"><div class="texto"><input type="hidden" name="pregunta_like" value="' + this.id +'"> ' + this.text + '<p>' + this.likes + '</p></div><button class="trash icon-trash" type="submit" name="delete" value=""></button></form></li>');
-					});
+			$.get('/debate/admin/preguntas?type=' + type, function(data) {
+				$('#pregunta ul').html('');
+				if(data.length == 0) {
+					$('#pregunta ul').append('<li class="error">No se han encontrado preguntas de esa categoria.</li>');
+				}
+				$.each(data, function() {
+					$('#pregunta ul').append('<li class="pregunta"><form class="like" action="/debate/admin/" method="post"><div class="texto"><input type="hidden" name="pregunta_like" value="' + this.id +'"> ' + this.text + '<p>' + this.likes + '</p></div><button class="trash icon-trash" type="submit" name="delete" value=""></button></form></li>');
 				});
+			});
 	}, 2000);
 
 });

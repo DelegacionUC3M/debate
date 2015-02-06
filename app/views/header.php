@@ -25,7 +25,7 @@
                 <div id="user">
                     <?php
 			         if($user) { ?>
-                     <!-- prueba -->
+                     <!-- prueba2 -->
                         <span>Hola, <?= $user->cn; ?> </span>
                         <?php if ($user->rol < 100){ ?>
                         <a class="logout" href="/debate/inicio/logout">Salir</a>

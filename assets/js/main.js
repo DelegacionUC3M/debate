@@ -50,7 +50,7 @@ $(function(){
 
 //ADMIN
 	setInterval(function() {
-		var type = $('#preguntaAdmin #preguntas').attr('data-type');
+		var type = $('#pregunta ul').attr('data-type');
 				$.get('/debate/admin/preguntas?type=' + type, function(data) {
 					$('#pregunta ul').html('');
 					if(data.length == 0) {

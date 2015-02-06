@@ -28,7 +28,6 @@
                      <!-- prueba3 -->
                         <span>Hola, <?= $user->cn; ?> </span>
                         <a class="logout" href="/debate/inicio/logout">Salir</a>
-                        <a class="logout" href="/debate/admin/">Admin</a>
                         <!-- Si el usuario es administrador, además le aparece el boton de admin -->
                        <?php if ($user->rol >= 100){ ?>
                         <a class="admin" href="/debate/admin/">Admin</a>

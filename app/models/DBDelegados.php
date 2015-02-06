@@ -5,6 +5,6 @@ class DBDelegados {
 		$db->run('SELECT permisos.rol FROM permisos LEFT JOIN personas ON personas.id = permisos.id_user
 				where personas.nia = ? AND permisos.app_id = 3;',array($nia));
 		$data = $db->data();
-		return $data[0]['rol'];//Añadir la tabla permisos a la db delegados
+		return $data;//Añadir la tabla permisos a la db delegados
 	}
 }

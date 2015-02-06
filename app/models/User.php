@@ -13,7 +13,7 @@ class User {
     	$this->cn = $name;
     	$this->mail = $email;
     	$this->dn = $dn;
-        $this->$rol = DBDelegados::getRol($nia);
+        $this->$rol = DBDelegados::getRol($this->uid);
     	//Pedir a la base de datos si el nia esta en la tabla de usuarios.
 
     	$cat = explode(",",$dn);

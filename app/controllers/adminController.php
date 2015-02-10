@@ -1,24 +1,31 @@
 <?php
 
+/**
+ * Controlador correspondiente a las páginas de admin
+ */
 class adminController extends Controller {
 	
 	/**
 	 * Comprueba la identidad del usuario y si es correcta realiza una llamada
 	 * a la función panel.
-	 * En la vista de inicio muestra un resumen de las preguntas.
+	 * En caso de no validarse se redirige al inicio.
+	 * 
 	 * @return void
 	 */
 	function index() {
 		if ($this->security(false)) {
 			$this->panel();
 		} else {
-			$preguntas = Pregunta::findAll();
-			print_r($preguntas);
-			$this->render('inicio', array('preguntas' => $preguntas));
+			$this->render('inicio');
 		}
 	}
 
-	//Función necesaria para que el caso de que la seguridad falle? exista el método panel de this.
+	/**
+	 * Rellena la página con las preguntas correspondientes a la categoría alumnos.
+	 * En caso de fallar la validación se redirige a inicio.
+	 * 
+	 * @return void
+	 */
 	function panel() {
 		
 		if(!$this->security(false)) header('Location: /debate/inicio');	
@@ -34,28 +41,38 @@ class adminController extends Controller {
 		
 		//Un array de 3 posiciones en las que cada posición es un array de preguntas de cada grupo.
 		$arrayAlumnos = Pregunta::findByCategory('alumnos');
-		$arrayPDI = Pregunta::findByCategory('pdi');
-		$arrayPAS = Pregunta::findByCategory('pas');
-		$this->render('admin', array('alumnos' => $arrayAlumnos,'pdi' => $arrayPDI,'pas' => $arrayPAS));
+		$this->render('admin', array('alumnos' => $arrayAlumnos));
 	}
 
+	/**
+	 * AJAX
+	 * Imprime las preguntas de una categoria.
+	 * Si falla la validación, lanza un error.
+	 * 
+	 * @return void
+	 */
 	function preguntas() {
-		$category = $_GET['type'];
 		header('Content-Type: application/json');
-		switch ($category) {
-			case 'alumnos':
-				echo json_encode(Pregunta::findByCategory('Alumnos'));
-				break;
-			case 'pdi':
-				echo json_encode(Pregunta::findByCategory('Personal Docente e Investigador'));
-				break;
-			case 'pas':
-				echo json_encode(Pregunta::findByCategory('Personal de Administracion y Servicios'));
-				break;
-			
-			default:
-				echo json_encode(array());
-				break;
+		if (!$this->security(false)) {
+			header('HTTP/1.0 401 Unauthorized');
+			echo json_encode(array());
+		} else {
+			$category = $_GET['type'];
+			switch ($category) {
+				case 'alumnos':
+					echo json_encode(Pregunta::findByCategory('Alumnos'));
+					break;
+				case 'pdi':
+					echo json_encode(Pregunta::findByCategory('Personal Docente e Investigador'));
+					break;
+				case 'pas':
+					echo json_encode(Pregunta::findByCategory('Personal de Administracion y Servicios'));
+					break;
+				
+				default:
+					echo json_encode(array());
+					break;
+			}
 		}
 	}
 }

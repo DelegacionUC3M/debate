@@ -29,6 +29,7 @@ class Controller {
 	 * Carga la vista correspondiente a la página
 	 * @param  string $view nombre del archivo de la vista a renderizar
 	 * @param  array  $data variables a inyectar en la vista
+	 * 
 	 * @return void
 	 */
 	protected function render($view, $data = array()) {
@@ -51,6 +52,7 @@ class Controller {
 	/**
 	 * Renderización del mensaje de error.
 	 * @param  integer $code código de error
+	 * 
 	 * @return void
 	 */
 	protected function render_error($code = 404) {
@@ -60,6 +62,7 @@ class Controller {
 	/**
 	 * Renderización del mensaje de error.
 	 * @param  integer $code código de error
+	 * 
 	 * @return void
 	 */
 	public static function error($code = 404) {
@@ -68,7 +71,7 @@ class Controller {
 			$error = 'La página solicitada no existe :(';
 		} else if ($code == 401) {
 			header('HTTP/1.0 401 Unauthorized');
-			$error = 'No tienes permiso para acceder aquí :(';
+			$error = 'No tienes permiso para acceder aquí >:(';
 		}
 
 		$title = isset($title) ? $title : 'DEBATE - Delegación UC3M | Error';

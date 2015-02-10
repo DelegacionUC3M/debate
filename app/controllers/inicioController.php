@@ -1,16 +1,32 @@
 <?php
 
+/**
+ * Controlador correspondiente para el resto de vistas (no admin)
+ */
 class inicioController extends Controller {
 	
+	/**
+	 * Comprueba la identidad del usuario y si es correcta realiza una llamada
+	 * a la función panel.
+	 * En caso de no validarse se redirige al inicio.
+	 * 
+	 * @return void
+	 */
 	function index() {
 		if ($this->security(false)) {
 			$this->panel();
 		} else {
-			$preguntas = Pregunta::findAll();
-			$this->render('inicio', array('preguntas' => $preguntas));
+			$this->render('inicio');
 		}
 	}
 
+	/**
+	 * Verifica si existe una sesión actualmente, en caso de existir redirige a inicio.
+	 * Renderiza la página de login.
+	 * Cuando recibe contraseña y nia por POST las valida.
+	 * 
+	 * @return void
+	 */
 	function login() {
 		if($this->security(false)) {
 			header('Location: /debate/inicio');
@@ -43,6 +59,12 @@ class inicioController extends Controller {
 		}
 	}
 
+	/**
+	 * Cierre de sesión.
+	 * Redirige a inicio.
+	 * 
+	 * @return void
+	 */
 	function logout() {
 		session_start();
 		session_destroy();
@@ -50,6 +72,15 @@ class inicioController extends Controller {
 		header('Location: /debate/inicio');
 	}
 
+	/**
+	 * Valida la sesión del usuario, en caso de fallar redirige a inicio.
+	 * Permite introducir nuevas preguntas si no existe una igual.
+	 * Permite darle like a preguntas de otras personas.
+	 * Permite eliminar tus propias preguntas.
+	 * Renderiza todas las preguntas de la categoría a la que pertenece el usuario.
+	 * 
+	 * @return void
+	 */
 	function panel() {
 		if(!$this->security(false)) header('Location: /debate/inicio');	
 		$preguntas = new Pregunta();
@@ -100,6 +131,12 @@ class inicioController extends Controller {
 		$this->render('panel',$data);	
 	}
 
+	/**
+	 * AJAX
+	 * Imprime las 10 preguntas más votadas de una categoria.
+	 * 
+	 * @return void
+	 */
 	function preguntas() {
 		$category = $_GET['type'];
 		header('Content-Type: application/json');

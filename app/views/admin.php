@@ -5,7 +5,7 @@
 			
 		<div id="preguntaAdmin">
 			<div id='categorias'>
-				<a class="tab" id="alumnos" class='active'>Alumnos</a>
+				<a class="tab active" id="alumnos">Alumnos</a>
 				<a class="tab" id="pdi">PDI</a>
 				<a class="tab" id="pas">PAS</a>
 			</div>

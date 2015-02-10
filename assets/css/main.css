@@ -500,7 +500,8 @@ body {
   border: 1px solid #bad5e2;
   color: #006191;
 }
-#preguntaAdmin a.tab:hover {
+#preguntaAdmin a.tab:hover,
+#preguntaAdmin a.tab.active {
   background: #066394;
   color: #fff;
 }

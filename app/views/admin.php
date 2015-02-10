@@ -32,7 +32,3 @@
 		</div>
 	</div>
 </section>
-
-<script>
-	$("intervaloAdmin");
-</script>

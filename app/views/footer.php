@@ -27,9 +27,9 @@
         <?php
             if ($view == 'inicio') {
                 ?> 
-                <script>$("intervaloFrontal");</script>
+                <script>$("intervaloFrontal()");</script>
            <?php  } else if ($view == 'admin') {  ?> 
-                <script>$("intervaloAdmin");</script>
+                <script>$("intervaloAdmin()");</script>
            <?php  }
         ?>
     </body>

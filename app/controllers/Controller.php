@@ -1,7 +1,16 @@
 <?php
 
+/**
+ * Clase padre de los controladores con métodos genéricos.
+ */
 class Controller {
-
+	
+	/**
+	 * Comprueba la identidad del usuario contra el LDAP
+	 * 
+	 * @param  boolean $redirect  si es true redirige al login, pasandole la url desde la que se llega.
+	 * @return boolean            true si el usuario existe en el LDAP
+	 */
 	protected function security($redirect = true) {
 
 		if (isset($_SESSION['user']) && isset($_SESSION['user']->uid) && !empty($_SESSION['user']->uid)) {
@@ -16,6 +25,12 @@ class Controller {
 		return false;
 	}
 
+	/**
+	 * Carga la vista correspondiente a la página
+	 * @param  string $view nombre del archivo de la vista a renderizar
+	 * @param  array  $data variables a inyectar en la vista
+	 * @return void
+	 */
 	protected function render($view, $data = array()) {
 		if(!empty($data)) {
 			extract($data);
@@ -33,10 +48,20 @@ class Controller {
 		include ABSPATH . 'app/views/footer.php';
 	}
 
+	/**
+	 * Renderización del mensaje de error.
+	 * @param  integer $code código de error
+	 * @return void
+	 */
 	protected function render_error($code = 404) {
 		self::error($code);
 	}
-
+	
+	/**
+	 * Renderización del mensaje de error.
+	 * @param  integer $code código de error
+	 * @return void
+	 */
 	public static function error($code = 404) {
 		if ($code == 404) {
 			header("HTTP/1.0 404 Not Found");

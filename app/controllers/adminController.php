@@ -2,11 +2,18 @@
 
 class adminController extends Controller {
 	
+	/**
+	 * Comprueba la identidad del usuario y si es correcta realiza una llamada
+	 * a la función panel.
+	 * En la vista de inicio muestra un resumen de las preguntas.
+	 * @return void
+	 */
 	function index() {
 		if ($this->security(false)) {
 			$this->panel();
 		} else {
 			$preguntas = Pregunta::findAll();
+			print_r($preguntas);
 			$this->render('inicio', array('preguntas' => $preguntas));
 		}
 	}

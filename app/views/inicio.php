@@ -24,3 +24,7 @@
 			<a class="tab" id="pas">PAS</a>
 			<ul></ul>
 	</div>
+
+<script>
+	$("intervaloFrontal");
+</script>

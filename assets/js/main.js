@@ -1,6 +1,8 @@
 $(function(){
 
 	$('#pregunta a.tab').on('click', function(){
+		$('a.tab.active').removeClass('active');
+		$(this).addClass('active');
 		var id = $(this).attr('id');
 		$.get('/debate/inicio/preguntas?type=' + id, function(data) {
 			$('#pregunta ul').slideUp(400,function() {
@@ -18,6 +20,8 @@ $(function(){
 	});
 
 	$('#preguntaAdmin a.tab').on('click', function(){
+		$('a.tab.active').removeClass('active');
+		$(this).addClass('active');
 		var id = $(this).attr('id');
 		$.get('/debate/admin/preguntas?type=' + id, function(data) {
 			$('#preguntaAdmin ul').slideUp(400,function() {

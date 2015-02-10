@@ -445,7 +445,8 @@ body {
   border: 1px solid #bad5e2;
   color: #006191;
 }
-#pregunta a.tab:hover {
+#pregunta a.tab:hover,
+#pregunta a.tab.active {
   background: #066394;
   color: #fff;
 }

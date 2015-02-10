@@ -44,6 +44,7 @@ $(function(){
 function intervaloFrontal(){
 	setInterval(function() {
 		var type = $('#pregunta ul').attr('id');
+		if (typeof type != 'undefined') {
 			$.get('/debate/inicio/preguntas?type=' + type, function(data) {
 				$('#pregunta ul').html('');
 				if(data.length == 0) {
@@ -53,6 +54,7 @@ function intervaloFrontal(){
 					$('#pregunta ul').append('<li><p>' + this.text + '</p><span>' + this.likes + '</span></li>');
 				});
 			});
+		}
 	}, 2000);
 }
 

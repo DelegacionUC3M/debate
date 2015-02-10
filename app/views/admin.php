@@ -5,11 +5,11 @@
 			
 		<div id="preguntaAdmin">
 			<div id='categorias'>
-				<a class="tab" id="alumnos">Alumnos</a>
+				<a class="tab" id="alumnos" class='active'>Alumnos</a>
 				<a class="tab" id="pdi">PDI</a>
 				<a class="tab" id="pas">PAS</a>
 			</div>
-		<ul id='preguntas' data-type="alumnos" class='active'>
+		<ul id='preguntas' data-type="alumnos">
 				<?php
 				if(isset($alumnos)){
 					foreach($alumnos as $pregunta){ ?>

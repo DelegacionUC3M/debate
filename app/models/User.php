@@ -4,20 +4,27 @@
 * Clase correspondiente a los usuarios
 **/
 class User {
-	public $uid; // User identifier.
-    public $cn; // User full name.
-    public $mail; // User email account.
-    public $dn; // User LDAP path.
-    public $rol; //User rol (10 student, 100 admin)
-    public $category; //User category (Personal de Administracion y Servicios, Alumno, )
+    
+    // User identifier.
+	public $uid; // 
+    // User full name.
+    public $cn; 
+    // User email account.
+    public $mail; 
+    // User LDAP path.
+    public $dn;
+    //User rol (10 student, 100 admin)
+    public $rol;
+    //User category (Personal de Administracion y Servicios, Alumno, )
+    public $category;
 
     /**
     * Constructor de la clase
     *
-    * @param ???    $nia    Nia del usuario
-    * @param ???    $name   Nombre del ususario
-    * @param ???    $email  Email del usuario
-    * @param ???    $dn     Ruta LDAP del usuario
+    * @param string     $nia    Nia del usuario
+    * @param string     $name   Nombre del ususario
+    * @param string     $email  Email del usuario
+    * @param string     $dn     Ruta LDAP del usuario
     **/
     public function __construct($nia,$name,$email,$dn) {
     	$this->uid = $nia;

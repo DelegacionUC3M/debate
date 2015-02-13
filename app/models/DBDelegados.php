@@ -8,8 +8,8 @@ class DBDelegados {
 	/**
 	* Obtiene el rol de un usuario de la BD.
 	*
-	* @param  ??? $nia 		nia del usuario a buscar
-	* @return ??? $data 	rol del usuario en la BD.
+	* @param  string $nia 		nia del usuario a buscar
+	* @return string $data 	rol del usuario en la BD.
 	**/
 	public static function getRol($nia) {
 		$db = new DB(SQL_DB_DELEGADOS);

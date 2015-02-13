@@ -32,8 +32,8 @@ class Pregunta {
 	/**
 	* Busca preguntas en función del id.
 	*
-	* @param ??? 	 $id		Identificador de la pregunta
-	* @return array  $debate 	Array que contiene todas las preguntas encontradas
+	* @param  string	 $id		Identificador de la pregunta
+	* @return array 	 $debate 	Array que contiene todas las preguntas encontradas
 	**/
 
 	public static function findById($id){
@@ -55,7 +55,7 @@ class Pregunta {
 	* Busca todas las preguntas que se corresponden a una categoría.
 	* Las devuelve ordenadas según sus likes en orden descendente.
 	*
-	* @param  ???	 $category 	Categoría a buscar.
+	* @param  string $category 	Categoría a buscar.
 	* @return array  $debate 	Array que contiene todas las preguntas encontradas.
 	**/
 	public static function findByCategory($category){
@@ -77,7 +77,7 @@ class Pregunta {
 	* Busca las 10 mejores preguntas de una categoría.
 	* Las devuelve ordenadas según sus likes en orden descendente.
 	*
-	* @param  ??? 	 $category 	Categoría a buscar
+	* @param  string $category 	Categoría a buscar
  	* @return array  $debate 	Array que contiene todas las preguntas encontradas
 	**/
 	public static function findByCategoryF($category){
@@ -122,9 +122,9 @@ class Pregunta {
 	/**
 	* Aumenta en uno los likes de una pregunta.
 	*
-	* @param ??? 	$id 	Identificador de la pregunta
-	* @param ??? 	$likes 	Likes de la pregunta 
-	* @return void
+	* @param 	string 	$id 	Identificador de la pregunta
+	* @param 	string 	$likes 	Likes de la pregunta 
+	* @return 	void
 	**/
 	public function upgradeLikes($id,$likes){
 		$db = new DB;
@@ -135,7 +135,7 @@ class Pregunta {
 	/**
 	* Guarda una pregunta en la BD
 	* 
-	* @return ????
+	* @return funcionPDO 		Si la función se ha completado con exito.
 	**/
 	public function save(){
 		$db = new DB;

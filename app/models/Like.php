@@ -25,7 +25,7 @@ class Like {
 	/**
 	* Aumenta los likes de una pregunta en uno.
 	*
-	* @param 	??????	$id 	identificador de la pregunta.
+	* @param 	string	$id 	identificador de la pregunta.
 	* @return 	count? 	$likes 	Likes de la pregunta.
 	**/
 	public static function getLikes($id){
@@ -38,8 +38,8 @@ class Like {
 	/**
 	* Comprueba si el id del usuario ya ha dado like a la pregunta
 	*
-	* @param 	????? 	$author_id 		Identificador de usuario
-	* @param 	????? 	$id_pregunta 	Identificador de pregunta
+	* @param 	string 	$author_id 		Identificador de usuario
+	* @param 	string 	$id_pregunta 	Identificador de pregunta
 	* @return 	boolean 				True si es el autor
 	**/
 
@@ -53,8 +53,8 @@ class Like {
 	/**
 	* Comprueba si el id del usuario se corresponde con el id de la pregunta.
 	*
-	* @param 	???? 	$author_id 		Identificador usuario
-	* @param 	???? 	$id 			Identificador de la pregunta
+	* @param 	string 	$author_id 		Identificador usuario
+	* @param 	string 	$id 			Identificador de la pregunta
 	* @return 	boolean 				Devuelve true si es el autor
 	**/
 	public static function ownLike($author_id,$id){
@@ -67,8 +67,8 @@ class Like {
 	/**
 	* Obtiene el id de una pregunta en función del texto.
 	*
-	* @param 	???? $texto 	Contenido que buscar en la pregunta
-	* @return 	???? $pregunta  Id de la pregunta que se corresponde con $texto
+	* @param 	string $texto 	Contenido que buscar en la pregunta
+	* @return 	string $pregunta  Id de la pregunta que se corresponde con $texto
 	**/
 	public static function getId($texto){
 		$db = new DB;

@@ -23,6 +23,7 @@ class DB {
 	private $dbs;
 	private $db;
 	private $stmt;
+
 	function __construct($dbs = SQL_DB) {
 		$this->dbs = $dbs;
 		$this->db = new PDO('mysql:host='.$this->host.';dbname='.$this->dbs.';charset=utf8', $this->user, $this->pass);

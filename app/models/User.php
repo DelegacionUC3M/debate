@@ -1,5 +1,8 @@
 <?php
 
+/**
+* Clase correspondiente a los usuarios
+**/
 class User {
 	public $uid; // User identifier.
     public $cn; // User full name.
@@ -8,6 +11,14 @@ class User {
     public $rol; //User rol (10 student, 100 admin)
     public $category; //User category (Personal de Administracion y Servicios, Alumno, )
 
+    /**
+    * Constructor de la clase
+    *
+    * @param ???    $nia    Nia del usuario
+    * @param ???    $name   Nombre del ususario
+    * @param ???    $email  Email del usuario
+    * @param ???    $dn     Ruta LDAP del usuario
+    **/
     public function __construct($nia,$name,$email,$dn) {
     	$this->uid = $nia;
     	$this->cn = $name;

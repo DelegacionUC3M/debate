@@ -4,11 +4,18 @@
 * Clase que acompaña a las preguntas y contiene sus likes.
 **/
 class Like {
+
+ 	/** Id del like en la BD **/
 	public $id;
+	/** Id de la pregunta en la BD **/
 	public $id_pregunta;
+	/** Id del usuario en la BD **/
 	public $uid;
+	/** Autor del like **/
 	public $author;
+	/** Fecha del like **/
 	public $date;
+	/** Texto de la pregunta **/
 	public $text;
 
 	/**
@@ -26,7 +33,7 @@ class Like {
 	* Aumenta los likes de una pregunta en uno.
 	*
 	* @param 	string	$id 	identificador de la pregunta.
-	* @return 	count? 	$likes 	Likes de la pregunta.
+	* @return 	int 	$likes 	Likes de la pregunta.
 	**/
 	public static function getLikes($id){
 		$db = new DB;

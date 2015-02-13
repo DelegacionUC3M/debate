@@ -5,17 +5,17 @@
 **/
 class User {
     
-    // User identifier.
-	public $uid; // 
-    // User full name.
+    /** User identifier. **/
+	public $uid; 
+    /** User full name. **/
     public $cn; 
-    // User email account.
+    /** User email account.**/
     public $mail; 
-    // User LDAP path.
+    /** User LDAP path.**/
     public $dn;
-    //User rol (10 student, 100 admin)
+    /** User rol (10 student, 100 admin) **/
     public $rol;
-    //User category (Personal de Administracion y Servicios, Alumno, )
+    /**  User category (Personal de Administracion y Servicios, Alumno...) **/
     public $category;
 
     /**

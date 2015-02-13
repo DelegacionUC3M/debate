@@ -1,11 +1,19 @@
 <?php
 class Pregunta {
+
+	/** Id de la pregunta en la BD**/
 	public $id;
+	/** Nia del autor **/
 	public $uid;
+	/** Likes de la pregunta **/
 	public $likes;
+	/** Autor de la pregunta **/
 	public $author;
+	/** Categoria de la pregunta **/
 	public $category;
+	/** Texto de la pregunta **/
 	public $text;
+	/** Fecha de la pregunta**/
 	public $date;
 	
 	/**

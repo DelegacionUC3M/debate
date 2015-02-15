@@ -52,17 +52,17 @@ class Controller {
 	/**
 	 * Renderización del mensaje de error.
 	 * @param  integer $code código de error
-	 * 
+	 *
 	 * @return void
 	 */
 	protected function render_error($code = 404) {
 		self::error($code);
 	}
-	
+
 	/**
 	 * Renderización del mensaje de error.
 	 * @param  integer $code código de error
-	 * 
+	 *
 	 * @return void
 	 */
 	public static function error($code = 404) {

@@ -16,6 +16,7 @@
   text-transform: none;
   line-height: 1;
   /* Better Font Rendering =========== */
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -260,14 +261,19 @@ body {
 .main.inicio {
   border-spacing: 0 65px;
 }
-.main.inicio li {
+.main.inicio ul#events li {
+  list-style: none;
+  display: inline-block;
+  width: 33%;
+}
+.main.inicio ul#description li {
   list-style: none;
   display: inline-block;
   width: 50%;
   padding: 0 30px;
   box-sizing: border-box;
 }
-.main.inicio li p {
+.main.inicio ul#description li p {
   text-align: justify;
 }
 .main.login {
@@ -606,4 +612,13 @@ footer span {
   75% {
     transform: rotate(1.5deg);
   }
+}
+@media (max-width: 1060px) {
+  
+}
+@media (max-width: 670px) {
+  
+}
+@media (max-width: 470px) {
+  
 }

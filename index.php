@@ -23,7 +23,7 @@ function __autoload($class) {
 $controller = (isset($_GET['c']) && !empty($_GET['c'])) ? $_GET['c'].'Controller' : 'inicioController';
 $action = (isset($_GET['a']) && !empty($_GET['a'])) ? $_GET['a'] : 'index';
 
-if (!method_exists($class, $action)) {
+if (!method_exists($controller, $action)) {
 	Controller::error(404);
 }
 

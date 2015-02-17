@@ -15,8 +15,8 @@ function __autoload($class) {
 		include ('app/lib/'.$class.'.php');
 	}
 
-	if(!class_exists($class)) {
-//		Controller::error(404);
+	if (!class_exists($class)) {
+		Controller::error(404);
 	}
 }
 $controller = (isset($_GET['c']) && !empty($_GET['c'])) ? $_GET['c'].'Controller' : 'inicioController';

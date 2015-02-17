@@ -262,13 +262,16 @@ body {
   border-spacing: 0 65px;
 }
 .main.inicio ul {
-  margin-bottom: 10px;
+  margin: 30px 0;
 }
 .main.inicio ul#events li {
   list-style: none;
   display: inline-block;
   vertical-align: top;
   width: 33%;
+}
+.main.inicio ul#events li h3 {
+  margin: 5px 0;
 }
 .main.inicio ul#description li {
   list-style: none;

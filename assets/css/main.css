@@ -472,6 +472,7 @@ body {
   background: #FEB2B2;
   width: 90%;
   margin: 10px auto;
+  padding: 10px 0;
   display: block;
 }
 #pregunta ul li p {
@@ -528,6 +529,7 @@ body {
   background: #FEB2B2;
   width: 90%;
   margin: 10px auto;
+  padding: 10px 0;
   display: block;
 }
 #preguntaAdmin ul li p {

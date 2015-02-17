@@ -445,6 +445,7 @@ body {
 }
 #pregunta a.tab {
   display: inline-block;
+  cursor: pointer;
   padding: 8px 23px;
   border-radius: 5px;
   border: 1px solid #bad5e2;
@@ -471,7 +472,7 @@ body {
   background: #FEB2B2;
   width: 90%;
   margin: 10px auto;
-  font-weight: bold;
+  display: block;
 }
 #pregunta ul li p {
   display: inline-block;
@@ -500,6 +501,7 @@ body {
 }
 #preguntaAdmin a.tab {
   display: inline-block;
+  cursor: pointer;
   padding: 8px 23px;
   border-radius: 5px;
   border: 1px solid #bad5e2;
@@ -526,7 +528,7 @@ body {
   background: #FEB2B2;
   width: 90%;
   margin: 10px auto;
-  font-weight: bold;
+  display: block;
 }
 #preguntaAdmin ul li p {
   display: inline-block;

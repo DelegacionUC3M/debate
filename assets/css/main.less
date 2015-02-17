@@ -243,7 +243,7 @@ html, body {
 	}
 
 	&.inicio, &.login {
-		background: linear-gradient(rgba(0, 97, 145, 0.65), rgba(0, 97, 145, 0.65)), url('/debate/assets/img/Geta.jpg') center;
+		background: linear-gradient(rgba(0, 97, 145, 0.8), rgba(0, 97, 145, 0.8)), url('/debate/assets/img/Geta.jpg') center;
 		background-size: cover;
 		color: #fff;
 		text-align: center;
@@ -281,7 +281,7 @@ html, body {
   		border-spacing: 0 65px;
 
   		ul {
-  			margin: 35px 0;
+  			margin: 40px 0;
 
   			&#events > li {
   				list-style: none;
@@ -294,17 +294,21 @@ html, body {
 				}
   			}
 
-  			&#description > li {
-  				list-style: none;
-				display: inline-block;
-				vertical-align: top;
-				width: 50%;
-				padding: 0 30px;
-				box-sizing: border-box;
+  			&#description {
+  				margin-bottom: 0;
 
-				p, li { 
-					text-align: justify;
-					margin: 15px 0;
+  				& > li {
+	  				list-style: none;
+					display: inline-block;
+					vertical-align: top;
+					width: 50%;
+					padding: 0 30px;
+					box-sizing: border-box;
+
+					p, li { 
+						text-align: justify;
+						margin: 15px 0;
+					}
 				}
   			}
   		}

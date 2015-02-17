@@ -264,16 +264,16 @@ body {
 .main.inicio ul {
   margin: 35px 0;
 }
-.main.inicio ul#events li {
+.main.inicio ul#events > li {
   list-style: none;
   display: inline-block;
   vertical-align: top;
   width: 33%;
 }
-.main.inicio ul#events li h3 {
+.main.inicio ul#events > li h3 {
   margin: 5px 0;
 }
-.main.inicio ul#description li {
+.main.inicio ul#description > li {
   list-style: none;
   display: inline-block;
   vertical-align: top;
@@ -281,8 +281,10 @@ body {
   padding: 0 30px;
   box-sizing: border-box;
 }
-.main.inicio ul#description li p {
+.main.inicio ul#description > li p,
+.main.inicio ul#description > li li {
   text-align: justify;
+  margin: 15px 0;
 }
 .main.login {
   border-spacing: 0 80px;

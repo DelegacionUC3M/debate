@@ -284,7 +284,7 @@ html, body {
   		ul {
   			margin: 35px 0;
 
-  			&#events li {
+  			&#events > li {
   				list-style: none;
 				display: inline-block;
 				vertical-align: top;
@@ -295,7 +295,7 @@ html, body {
 				}
   			}
 
-  			&#description li {
+  			&#description > li {
   				list-style: none;
 				display: inline-block;
 				vertical-align: top;
@@ -303,8 +303,9 @@ html, body {
 				padding: 0 30px;
 				box-sizing: border-box;
 
-				p { 
+				p, li { 
 					text-align: justify;
+					margin: 15px 0;
 				}
   			}
   		}

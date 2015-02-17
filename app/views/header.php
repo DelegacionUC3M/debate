@@ -31,13 +31,12 @@
                         <a href="/debate/admin/">Admin</a>
                     <?php  } ?>
                         <a href="/debate/inicio/logout">Salir</a>
-                        <!-- Si el usuario es administrador, además le aparece el boton de admin -->
-                    <?php } 
+                    <?php }
                     else { ?>
                         <a href="/debate/inicio/login">Entrar</a>
                     <?php } ?>
                 </div>
-                <a href="/debate/inicio"> <h1>Debate al Rector</h1> </a>
+                <a href="/debate/inicio"> <h1>Elecciones</h1> </a>
                 <a href="http://delegacion.uc3m.es" target="_blank"> <img src="/debate/assets/img/delegacion.png"> </a>
 
             </div>

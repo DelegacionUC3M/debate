@@ -1,6 +1,6 @@
 <div class="wrapper">
-	<h2>Entrar a Debate a Rector</h2>
-	<p>Está intentando acceder a un área protegida. </br> Introduzca su usuario y contraseña:</p>
+	<h2>Entrar a Elecciones</h2>
+	<p>Está intentando acceder a un área protegida. </br> Introduzca usuario y contraseña para validarse, las preguntas son anónimas:</p>
 
 	<p class="error"><?php echo isset($error) ? $error : '' ?></p>
 	

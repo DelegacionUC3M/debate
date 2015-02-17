@@ -261,14 +261,19 @@ body {
 .main.inicio {
   border-spacing: 0 65px;
 }
+.main.inicio ul {
+  margin-bottom: 10px;
+}
 .main.inicio ul#events li {
   list-style: none;
   display: inline-block;
+  vertical-align: top;
   width: 33%;
 }
 .main.inicio ul#description li {
   list-style: none;
   display: inline-block;
+  vertical-align: top;
   width: 50%;
   padding: 0 30px;
   box-sizing: border-box;

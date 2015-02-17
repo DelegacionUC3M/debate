@@ -18,7 +18,7 @@
         </ul>
         <ul id="description">
 			<li>
-				<h2>¿Cómo será el evento?</h2>
+				<h2>¿Cuál será la estructura del evento?</h2>
 				<p>El encuentro de la comunidad universitaria con el candidato a Rector de la UC3M que se celebrará en los Campus de Getafe, Leganés y Colmenarejo tendrá las siguientes partes:
                 <ol>
                     <li>Presentación del programa del candidato</li>

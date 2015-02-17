@@ -2,21 +2,21 @@
 	<div class="wrapper">
 		<h2>Preguntas para las elecciones a Rector</h2>
 		<p>Mediante esta aplicacion profesores, alumnos y personal administrativo pueden enviar las preguntas que deseean que se realicen al candidato a Rector en los siguientes eventos públicos:</p>
-		<ul>
+		<ul id="events">
             <li>
                 <h3>Getafe</h3>
-                <h4>Lunes 23 febrero <br/> Salón de Grados</h4>
+                <p>Lunes 23 febrero <br/> Salón de Grados</p>
             </li>
             <li>
                 <h3>Leganés</h3>
-                <h4>Miércoles 25 febrero <br/> Salón de Grados</h4>
+                <p>Miércoles 25 febrero <br/> Salón de Grados</p>
             </li>
             <li>
                 <h3>Colmenarejo</h3>
-                <h4>Lunes 2 marzo <br/> Salón de Grados</h4>
+                <p>Lunes 2 marzo <br/> Salón de Grados</p>
             </li>
         </ul>
-        <ul>
+        <ul id="description">
 			<li>
 				<h2>¿Cómo será el evento?</h2>
 				<p>En el encuentro de la comunidad universitaria con el candidato a Rector de la UC3M que se celebrará en </p>

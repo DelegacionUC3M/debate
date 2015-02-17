@@ -281,17 +281,25 @@ html, body {
 	&.inicio {
   		border-spacing: 0 65px;
 
-		li {
-			list-style: none;
-			display: inline-block;
-			width: 50%;
-			padding: 0 30px;
-			box-sizing: border-box;
+  		ul {
+  			&#events li {
+  				list-style: none;
+				display: inline-block;
+				width: 33%;
+  			}
 
-			p { 
-				text-align: justify;
-			}
-		}
+  			&#description li {
+  				list-style: none;
+				display: inline-block;
+				width: 50%;
+				padding: 0 30px;
+				box-sizing: border-box;
+
+				p { 
+					text-align: justify;
+				}
+  			}
+  		}
 	}
 
 	&.login {

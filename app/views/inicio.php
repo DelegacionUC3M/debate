@@ -20,19 +20,16 @@
 			<li>
 				<h2>¿Cómo será el evento?</h2>
 				<p>El encuentro de la comunidad universitaria con el candidato a Rector de la UC3M que se celebrará en los Campus de Getafe, Leganés y Colmenarejo tendrá las siguientes partes:
-                <ul>
+                <ol>
                     <li>Presentación del programa del candidato</li>
                     <li>Preguntas de la comunidad universitaria por estamento más votadas en la aplicación</li>
                     <li>Preguntas del público asistente</li>
-                </ul>
+                </ol>
 
 			</li><li>
 				<h2>¿Cómo se eligen las preguntas de la aplicación?</h2>
-				<p><ul>
-                    <li>Hasta el domingo 22 de febrero se podrán introducir y votar preguntas en la aplicación.</li>
-                    <li>Las seis preguntas más votadas para cada estamento serán realizadas al candidato el día del encuentro. Se realizará dos preguntas de cada estamento por sesión.</li>
-                </ul>
-                </p>
+				<p>Hasta el domingo 22 de febrero se podrán introducir y votar preguntas en la aplicación.</p>
+                <p>Las seis preguntas más votadas para cada estamento serán realizadas al candidato el día del encuentro. Se realizará dos preguntas de cada estamento por sesión.</p>
 			</li>
 		</ul>
 	</div>

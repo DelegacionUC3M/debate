@@ -37,7 +37,7 @@ class Controller {
 			extract($data);
 		}
 
-		$title = isset($title) ? $title : 'ELECCIONES - Delegación UC3M';
+		$title = isset($title) ? $title : 'Elecciones - Delegación UC3M';
 		$user = isset($_SESSION['user']) ? $_SESSION['user'] : NULL;
 
 		if ($view == 'inicio' || $view == 'login') {
